@@ -1,0 +1,72 @@
+
+ .navbar{
+    width:100%;
+    background-color: rgb(123,144,224);
+    border-radius:0;
+}
+.nabigationBar{
+    position: absolute ;
+    left: 70%;
+}
+.navbar img{
+    margin-left:10%;
+    margin-top:2em;
+    width:90%;
+    float: left;
+    font-weight: bold;
+}
+.navbar-nav{
+   margin-right: 3%;
+
+}
+li>a{
+    display: block;
+    font-size: 130%;
+    color:rgb(194, 14, 14);
+    margin-top:2em;	
+    text-decoration: none;
+    left: 100%;
+    padding-right: 25%;
+    font-weight: bold;
+}
+
+/* Animation */
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0, 40px, 0)
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}

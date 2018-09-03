@@ -1,0 +1,182 @@
+<ng-template #content let-modal let-c="close" let-d="dismiss" >
+  <form *ngIf="personalData" >
+    <div class="first_content ">
+      <h1 class="make-your-booking">Make your booking</h1>
+      <h2 class="personal-details">PERSONAL DETAILS</h2>
+      <div class="form-group">
+        <table class="position_form table1">
+          <tr class="left_row">
+            <td><h5>Name</h5><input  type="text" name="your_name"></td>
+            <td><div class="space"></div></td>
+            <td><h5>Email</h5><input  type="text" name="your_email"></td>
+          </tr>
+          <tr class="left_row">
+            <td><div class="space"></div></td>
+          </tr>
+          <tr class="right_row">
+            <td><h5>Phone number</h5><input  type="text" name="your_phone"></td>
+            <td><div class="space"></div></td>
+            <td><h5>&nbsp;</h5><button  class="sp_book_btn" (click)="manageForms(false, false, true)" >NEXT</button></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </form>
+  <form *ngIf="calendarData" >
+<!-- END FIRST MODAL CONTENT -->
+<!-- BEGIN SECOND MODAL CONTENT -->
+    <div class="second_content" >
+      <h1 class="make-your-booking" >Make your booking</h1>
+      <h2 class="personal-details">BOOKING INFORMATION</h2>
+      <table class="table2" >
+        <tr>
+        <table class="table3" >
+          <tr>
+            <th></th>
+            <th class="short">MON</th>
+            <th class="short">TUE</th>
+            <th class="short">WED</th>
+            <th class="short">THU</th>
+            <th>FRI</th>
+            <th>SAT</th>
+            <th>SUN</th>
+          </tr>
+          <tr>
+            <td>07:00</td>
+            <td><input class="sp_radio" type="radio" ></td>
+            <td><input type="radio" ></td>
+            <td><input type="radio" ></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>08:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>09:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>10:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>12:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>13:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>14:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>15:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>16:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>17:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>18:00</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+        </tr>
+        <tr>
+          <th><button  class="close_btn" (click)="manageForms(true, false, false)" >BACK</button></th>
+          <th><button  class="send_book_btn" (click)="manageForms(false, true, false)" >SEND BOOKING </button></th>
+        </tr>
+    </table>
+  </div>
+</form >
+  <form *ngIf="sentData">
+    <div class="third_content" >
+      <img class="sent_img" src="../assets/sent.png">
+      <h1 class="make-your-booking" style=" margin-top: 10px;">Your request was sent!</h1>
+      <h5>In a couple on seconds a confirmation email will be sent to your email address with all the details for your reservation. Thank you for using our services!</h5>
+      <button class="book_btn" aria-label="Close" (click)="d()" >CLOSE</button> <!--@click="hideModal_final"-->
+    </div>
+  </form>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary book_btn" (click)="open(content)" style="margin-bottom: 20px;">BOOK NOW</button>

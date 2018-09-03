@@ -1,0 +1,206 @@
+.hugeModal  {
+    max-width: 200% ;
+}
+.book_btn{
+  width: 50%;
+  height: 50px;
+  border-radius: 3px;
+  background: #c97ce5 ;
+  border: 0px;
+  font-size: 20px;
+  color: #fff;
+  font-family: Arial;   
+}
+.table3{
+  width: 100%;
+  font-family:Arial;
+  width: 211%;
+  border-spacing: 0;
+  border-collapse: separate;
+  table-layout: fixed;
+  margin-bottom: 50px;
+  border: 1px solid dimgray;
+  padding: 4%;    
+}
+.table2{
+  margin-left: -15%;
+  margin-top: -5%
+}
+tr{
+  color:dimgray;
+  font-size: 17px
+}
+.short{
+  margin-left: -205%;
+}
+.sp_book_btn{
+  width: 350px;
+  height: 55px;
+  border-radius: 3px;
+  background: #c97ce5 ;
+  border: 0px;
+  font-size: 20px;
+  color: #fff;
+  font-family: Arial;
+}
+.send_book_btn{
+  float: right;
+  margin-right: -12%;
+  width: 330px;
+  height: 55px;
+  border-radius: 3px;
+  background: #c97ce5 ;
+  border: 0px;
+  font-size: 20px;
+  color: #fff;
+  font-family: Arial;
+}
+  /* begin of modal section */ 
+.modal-footer{
+  display: none;
+}
+.modal-header{
+  border: 0px;
+}
+.modal1 .modal-dialog{
+  max-width: 1050px;
+  margin-top: 11%;
+  border: none;
+}
+.modal1 .modal-dialog h1{
+  color: #c97ce5;
+  font-size: 30px;
+  font-family: Arial;
+  font-weight: bold;
+  text-align: center;
+}
+.modal1 .modal-dialog h2{
+  color: #868686;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: normal;
+  margin-bottom: 80px;
+}
+.make-your-booking{
+  color: #c97ce5;
+  font-size: 30px;
+  font-family: Arial;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10%;
+}
+.personal-details{
+  color: #868686;
+  text-align: center;
+  font-size: 14px;
+  font-family: Arial;
+  font-weight: normal;
+  margin-bottom: 80px;
+}
+.close_btn{
+  width: 330px;
+  height: 55px;
+  float: left;
+  border-radius: 3px;
+  background: #DCDCDC;
+  border: 0px;
+  font-size: 20px;
+  color: #fff;
+  font-family: Arial;
+}
+.content_for_modal{
+  margin-top: -20px;
+}
+  /* BEGIN FIRST MODAL CONTENT */
+.first_content{
+  width: 68%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.first_content input[type="text"]{
+  height: 55px;
+  border-radius: 5px;
+  border: 1px solid #8A8A8A;
+  width: 350px;
+  max-width: 550px;
+  padding-left: 15px;
+}
+.first_content table1{
+  width: 100%;
+ }
+.first_content h5{
+  color: #484848;
+}
+.space{
+  width: 10px;
+}
+.spacev2{
+  height: 25px;
+}  
+  /* END FIRST MODAL CONTENT */
+  /* BEGIN SECOND MODAL CONTENT */
+.second_content{
+  width: 68%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+  }
+.second_content table1{
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #f700ff; 
+}
+.second_content  th{
+  width: 49%;
+  position: relative;
+  margin-left: -15%;
+}
+.position_form{
+  position: relative;
+  margin-left: -15%;
+  top:-30px;
+} 
+  /* END SECOND MODAL CONTENT */
+  /* BEGIN THIRD MODAL CONTENT */
+.third_content{
+  width: 68%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.third_content h4{
+  font-size: 20px;
+  color: #484848;
+} 
+.third_content h1{
+  font-size: 28px;
+  padding-top: 60px;
+}
+.third_content h5{
+  font-size: 20px;
+  color: #484848;
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
+.sent_img{
+  padding-top: 15%;
+}
+.validation{
+  margin-top: 15px;
+  padding: 5px;
+  color: #e52626;
+  font-weight: normal;
+}
+#empty_name {
+  display: none;
+} 
+#empty_phone {
+  display: none;
+}
+#empty_email {
+  display: none;
+}
+#letters_phone {
+  display: none;
+}

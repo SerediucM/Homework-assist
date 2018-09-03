@@ -1,0 +1,120 @@
+.section1{
+    width: 42%;
+    margin: 0 auto;
+    height: 600px;
+}
+.err-serviceName { 
+    width: 40%;
+    height: 5%;
+    background: transparent
+}
+.top{
+    margin: 0 auto;
+    margin-top: 25px;
+    height:190px;
+}
+.left{
+    width: 49%;
+    float: left;
+}
+.right{
+    width: 49%;
+    float: right;
+}
+.title{
+    color:#c97ce5   ;
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    display:inline-block ;
+}
+.details{
+    position: absolute;
+    color:darkgray;
+    font-family: Arial;
+    font-size: 14px;
+    display:inline-block ;
+    top: 14%;
+}
+.details_availability{
+    position: absolute;
+    color:darkgray;
+    font-family: Arial;
+    font-size: 14px;
+    display:inline-block ;
+    top: 48%;
+}
+.text{
+    margin-top: 30px;
+    margin-bottom: 3px;
+    color:dimgray;
+    font-family: Arial;
+    font-size: 19px;
+    display:inline-block ;
+
+}
+
+.tbox{
+    font-size: 25px;
+    
+    height: 55px;
+    width:  100%;
+    border-radius: 4px;
+    border: 1px solid #b3b3b3;
+
+}
+.tbox_mare{
+    font-size: 23px;
+    padding-left: 0;
+    height: 162px;
+    width:  100%;
+    border-radius: 4px;
+    border: 1px solid #b3b3b3;
+    resize: none;
+}
+
+.add{
+    margin-right: 10px;
+    float:right;
+    border-radius: 100%;
+    border: none;
+    height: 80px;
+    width: 80px;
+    background-color: #c97ce5;
+    color:white;
+    font-size: 40px ;
+    font-family: "Arial";
+}
+.service{
+    margin-top: 10px;
+    color:dimgray;
+    font-family: Arial;
+    font-size: 17px;
+    font-weight: bold;
+    display:inline-block ;
+    float:right;
+    clear: right;
+}
+table{
+    width: 100%;
+    margin-top: 20px;
+    font-family:Arial;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    table-layout: fixed;
+    margin-bottom: 50px;
+    border: 1px solid #b3b3b3;
+    padding: 4%;
+}
+.hour{
+    font-weight: bold;
+}
+tr{
+    color:dimgray;
+    font-size: 17px
+}
+
+.check{
+    margin: 10px 10px;
+}

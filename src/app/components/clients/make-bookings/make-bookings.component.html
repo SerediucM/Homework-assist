@@ -1,0 +1,272 @@
+<div id="booking">
+  <!-- begin of head section -->
+  <div class="head">
+    <table>
+  <tr>
+    <th class="co_logo">
+      <img src="../assets/company_logo.png">
+    </th>
+    <th class="co_info">
+      <h1>Company name</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent erat lorem, dapibus nec venenatis non, maximus id magna. Suspendisse odio augue, varius nec sodales quis, eleifend sit amet orci. Phasellus rutrum nibh et velit varius, a molestie diam lobortis.</p>
+    </th>
+  </tr>
+</table>
+  </div>
+    <div class="service_box">
+  <div class="title">
+      <h1>Name of the service</h1>
+      <img class="right_icons" src="../assets/trash.png"> 
+      <img class="right_icons" src="../assets/edit.png">
+      </div>
+    <div class="section2">
+      
+      <br>
+      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum. 
+      </h5>
+      <br>  
+      <div class="sd1">
+        <div class="sd11">
+          <h2>Mon - Fri, 08:00 - 16:00</h2>
+          <h5>Availability</h5><br>
+        </div>
+
+        <div class="sd12">
+          <h2>6 available</h2>
+          <h5>Spaces</h5>
+        </div>
+        <app-modal></app-modal>
+      </div> 
+
+      <div class="sd2">
+        <div class="sd21">
+          <h2>1 hour</h2>
+          <h5>Duration</h5>
+        </div>
+
+        <div class="sd22">
+          <h2>210 lei</h2>
+          <h5>Price</h5>
+        </div>
+      </div>  
+    </div>
+  </div>
+ </div>
+
+
+
+
+
+ 
+ <div class="modall " hidden="false" >
+  <div id="custom-modal-1">
+
+  <!-- Main UI -->
+
+  <!-- Modal Component -->
+  <div id="modal1" ref="my_modal">
+  <div class="content_for_modal">
+  <!-- BEGIN FIRST MODAL CONTENT -->
+    <form>
+      <div class="first_content">
+        <h1>Make your booking</h1>
+        <h2>PERSONAL DETAILS</h2>
+        <div class="form-group">
+
+        <table>
+  <tr class="left_row">
+    <td><h5>Name</h5><input  type="text" name="your_name"></td>
+            <td><div class="space"></div></td>
+    <td><h5>Email</h5><input  type="text" name="your_email"></td>
+  </tr>
+  <tr class="left_row">
+    <td>
+    <span class="form-group__message" id="empty_name" >Name field is required.</span>
+    <span class="form-group__message" >Name must have at least {{'interpolare'}} letters.</span>
+    </td>
+        <td><div class="space"></div></td>
+    <td><span class="form-group__message" id="empty_email">Email field is required.</span>
+    <span class="form-group__message" >Email must have at least {{'interpolare'}} letters.</span>
+    <br>
+    <span class="form-group__message" >Ex.: john@assist.ro</span>
+    </td>
+  </tr>
+  <tr class="right_row">
+    <td><h5>Phone number</h5><input  type="text" name="your_phone"></td>
+    <td><div class="space"></div></td>
+    <td><h5>&nbsp;</h5><button  class="sp_book_btn">NEXT</button></td>
+  </tr>
+  <tr>
+    <td><span class="form-group__message" id="empty_phone" >Phone field is required.</span>
+    <span class="form-group__message" >Phone must have at least {{'interpolare'}} numbers.</span>
+    </td>
+  </tr>
+</table>
+
+      </div>
+      </div>
+    </form>
+    <!-- END FIRST MODAL CONTENT -->
+    <!-- BEGIN SECOND MODAL CONTENT -->
+      <div class="second_content" >
+      <h1>Make your booking</h1>
+      <h2>BOOKING INFORMATION</h2>
+
+      <table>
+        <tr>
+        <table>
+  <tr>
+    <th></th>
+    <th>MON</th>
+    <th>TUE</th>
+    <th>WED</th>
+    <th>THU</th>
+    <th>FRI</th>
+    <th>SAT</th>
+    <th>SUN</th>
+  </tr>
+  <tr>
+    <td>07:00</td>
+    <td><input class="sp_radio" type="radio" name="" value=""></td>
+    <td><input type="radio" name="" value=""></td>
+    <td><input type="radio" name="" value=""></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>08:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>09:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>10:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>11:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>12:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>13:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>14:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>15:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>16:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>17:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>18:00</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+        </tr>
+        <tr>
+        <th><button  class="close_btn">BACK</button></th>
+        <th><button  class="sp_book_btn">SEND BOOKING</button></th>
+        </tr>
+    </table>
+
+      </div>
+
+    <!-- END SECOND MODAL CONTENT -->
+    <!-- BEGIN THIRD MODAL CONTENT -->
+
+        <div class="third_content" >
+        <img class="sent_img" src="../assets/company_logo.png">
+        <br>
+        <h1>Your request was sent!</h1>
+        <h5>In a couple on seconds a confirmation email will be sent to your email address with all the details for your reservation. Thank you for using our services!</h5>
+      <button class="book_btn" >CLOSE</button> <!--@click="hideModal_final"-->
+
+      </div>
+    </div>
+  </div>
+
+</div>
