@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
-import { exists } from 'fs';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -20,7 +19,6 @@ export class ModalComponent implements OnInit {
     this.manageForms(true,false,false);
     this.modalService.open(content, {size:'lg', centered: true}).result.then((result) => {
     }, (reason) => {
-      console.log("test $ "+ reason);
     });
   }
 
