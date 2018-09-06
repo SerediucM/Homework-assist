@@ -27,6 +27,16 @@
     font-size: 30px;
     font-weight: bold;
     display:inline-block ;
+    top: 10%;
+}
+.mb-3{
+	width:99%;
+	border-radius: 3%;
+	font-size: 1.16em;
+	background-color: rgb(250, 250, 250);
+    height:55px !important;
+    border-radius: 4px;
+    margin-top: 30px;
 }
 .details{
     position: absolute;
@@ -42,11 +52,12 @@
     font-family: Arial;
     font-size: 14px;
     display:inline-block ;
-    top: 48%;
+    top: 50%;
+    margin-bottom: 10%;
 }
 .text{
     margin-top: 30px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     color:dimgray;
     font-family: Arial;
     font-size: 19px;
@@ -55,22 +66,23 @@
 }
 
 .tbox{
-    font-size: 25px;
-    
+    font-size: 20px;
     height: 55px;
     width:  100%;
     border-radius: 4px;
     border: 1px solid #b3b3b3;
-
+    padding-left: 2%;
+    color:rgba(17, 17, 17, 0.74)
 }
 .tbox_mare{
-    font-size: 23px;
-    padding-left: 0;
+    font-size: 20px;
+    padding-left: 2%;
     height: 162px;
     width:  100%;
     border-radius: 4px;
     border: 1px solid #b3b3b3;
     resize: none;
+    color:rgba(17, 17, 17, 0.74)
 }
 
 .add{
@@ -82,8 +94,10 @@
     width: 80px;
     background-color: #c97ce5;
     color:white;
-    font-size: 40px ;
+    font-size: 60px ;
     font-family: "Arial";
+    font-weight: normal ;
+    cursor: pointer;
 }
 .service{
     margin-top: 10px;

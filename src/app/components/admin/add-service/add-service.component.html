@@ -6,7 +6,7 @@
           <div class="top">
               <form  action="Dashboard_v1">
                 <br><h3 class="title">Add new service</h3>
-                <input type="submit" value="+" class="add" [(disabled)]="!validformAccount.valid"><br>
+                <input type="submit" (click)="addService()" value="+" class="add" [(disabled)]="!validformAccount.valid"><br>
                 <h5 class="service">Add service</h5><br>
                 <h5 class="details">SERVICE DETAILS</h5>
               </form>
@@ -14,12 +14,12 @@
           <div class="left">
               <form action="">
                 <h5 class="text">Service name</h5><br>
-                <input type="text" class="tbox" required [(ngModel)]=logiInputPasswor name="serviceName" #serviceName= "ngModel" ><br>
+                <input type="text" class="tbox" required [(ngModel)]=small_description name="serviceName" #serviceName= "ngModel" ><br>
                 <div class="err-serviceName  alert-danger" *ngIf="serviceName.touched && !serviceName.valid" >
                     <div *ngIf="serviceName.errors.required">Password is required</div>
                 </div>
                 <h5 class="text">Service description</h5><br>
-                <textarea class="tbox_mare" required [(ngModel)]=loginInputPaswor name="serviceDescription" #serviceDescription= "ngModel" ></textarea>
+                <textarea class="tbox_mare" required [(ngModel)]=long_description name="serviceDescription" #serviceDescription= "ngModel" ></textarea>
                 <div class="err-serviceName  alert-danger" *ngIf="serviceDescription.touched && !serviceDescription.valid" >
                     <div *ngIf="serviceDescription.errors.required">Password is required</div>
                 </div>
@@ -28,177 +28,40 @@
           <div class="right">
             <form name="validformAccount"  #validformAccount="ngForm">
               <h5 class="text">Service duration</h5><br>
-              <input type="text" class="tbox" required [(ngModel)]=loginInputPasswor name="serviceDuration" #serviceDuration= "ngModel"><br>
+              <input type="text" class="tbox" required [(ngModel)]=duration name="serviceDuration" #serviceDuration= "ngModel"><br>
               <div class="err-serviceName  alert-danger" *ngIf="serviceDuration.touched && !serviceDuration.valid" >
                   <div *ngIf="serviceDuration.errors.required">Password is required</div>
               </div>
               <h5 class="text">Spaces</h5><br>
-              <input type="text" name="spaces" required [(ngModel)]=loginInputPassor name="serviceSpaces" #serviceSpaces= "ngModel" class="tbox"><br>
+              <input type="text"  required [(ngModel)]=spaces name="serviceSpaces" #serviceSpaces= "ngModel" class="tbox"><br>
               <div class="err-serviceName  alert-danger" *ngIf="serviceSpaces.touched && !serviceSpaces.valid" >
                   <div *ngIf="serviceSpaces.errors.required">Password is required</div>
               </div>
               <h5 class="text">Price</h5><br>
-              <input type="value" name="price" required [(ngModel)]=loginInputPpasswor name="servicePrice" #servicePrice= "ngModel" class="tbox"><br>
+              <input type="value"  required [(ngModel)]=price name="servicePrice" #servicePrice= "ngModel" class="tbox"><br>
               <div class="err-serviceName  alert-danger" *ngIf="servicePrice.touched && !servicePrice.valid" >
                   <div *ngIf="servicePrice.errors.required">Password is required</div>
               </div>
             </form>
           </div>
       </div>
-      <div class="section1">
+      <form class="section1" >
         <h5 class="details_availability">AVAILABILITY</h5>
-        <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>
-               <span class="short">MON</span>
-              </th>
-              <th>
-                <span class="short">TUE</span>
-              </th>
-              <th>
-                <span class="short">WED</span>
-             </th>
-              <th>
-                <span class="short">THU</span>
-              </th>
-              <th>
-                <span class="short">FRI</span>
-              </th>
-              <th>
-                <span class="short">SAT</span>
-              </th>
-              <th>
-                <span class="short">SUN</span>
-              </th>
-            </tr><br>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="hour" rowspan="1"><span>7:00</span></td>
-              <td><input type="checkbox" class="check" value="ora7" (click)="checkboxclick()" [(ngModel)]=Luni7 ></td>
-              <td><input type="checkbox" class="check" (click)="checkboxclick()" [(ngModel)]=Luni8></td>
-              <td><input type="checkbox" class="check" [(ngModel)]=Luni9></td>
-              <td><input type="checkbox" class="check" [(ngModel)]=Luni10></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <button (click)="test()"></button>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>8:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>9:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>10:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>11:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>12:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>13:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>14:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>15:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>16:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>17:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-            <tr>
-              <td class="hour" rowspan="1"><span>18:00</span></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-              <td><input type="checkbox" class="check"></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+        <div class="left " >
+          <h5 class="text">Enter a date and time </h5><br>
+          <input class="tbox" [(ngModel)]="startTime" type="time" name="partydate" >
+          <select class="mb-3" [(ngModel)]="startDay" name="first">
+            <option  *ngFor="let day of myData"   >{{day}}</option>
+          </select> 
+        </div>
+        <div class="right ">
+          <h5 class="text">Enter a date and time </h5><br>
+          <input class="tbox" [(ngModel)]="stopTime"  type="time" name="partydate" >
+          <select class="mb-3" [(ngModel)]="stopDay" name="firstt">
+            <option  *ngFor="let day of myData" >{{day}}</option>
+          </select>
+        </div>
+      </form>
     </div>
   </div>
 </div>

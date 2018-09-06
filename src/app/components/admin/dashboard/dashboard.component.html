@@ -4,37 +4,69 @@
     <div class="dashboard_v2">
       <div class="section1">
         <div class="top">
-            <div class="new_s"><h1>New service</h1></div>
+            <div class="new_s" (click)="newService()"><h1>New service</h1></div>
         </div>
-        <div class="service_box">
-          <div class="title">
-            <h1>Name of the service</h1>
-            <img class="right_icons" src="../assets/trash2.png"> 
-            <img class="right_icons" src="../assets/edit2.png">
+
+        <div class="service_box" *ngIf="show" style="padding-bottom:5%">
+            <div class="title">
+              <input type="text" placeholder="Name servises" [(ngModel)]=small_description class="EditName">
+              <img class="update_icons" (click)="update()" src="../../../../assets/update1.png">
+            </div>
+            <div class="section2"><br>
+              <textarea  placeholder="Description servises" class="DescriptionName" [(ngModel)]=long_description ></textarea><br><br>
+            <div class="sd1">
+              <div class="sd11">
+                <input type="text" placeholder="Availability" [(ngModel)]=availability >
+              </div>
+              <div class="sd12">
+                  <input type="text" placeholder="Spaces" [(ngModel)]=spaces style="width: 140%" >
+              </div>
+            </div> 
+            <div class="sd2">
+              <div class="sd21">
+                  <input type="text" placeholder="Duration" [(ngModel)]=duration style="width: 140%">           
+              </div>
+              <div class="sd22">
+                  <input type="text" placeholder="Price" [(ngModel)]=prices style="width: 170%">
+              </div>
+            </div>  
           </div>
-          <div class="section2"><br>
-          <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum. </h5><br>  
-          <div class="sd1">
-            <div class="sd11">
-              <h2>Mon - Fri, 08:00 - 16:00</h2>
-              <h5>Availability</h5>
-            </div>
-            <div class="sd12">
-              <h2>6 available</h2>
-              <h5>Spaces</h5>
-            </div>
-          </div> 
-          <div class="sd2">
-            <div class="sd21">
-              <h2>1 hour</h2>
-              <h5>Duration</h5>
-            </div>
-            <div class="sd22">
-              <h2>210 lei</h2>
-              <h5>Price</h5>
-            </div>
-          </div>  
         </div>
+
+
+        <div  *ngFor="let company of companys">
+          <div class="service_box" *ngIf="company.key==idclient">
+            <div class="title">
+              <h1>{{company.small_description}}</h1>
+              <img class="right_icons" (click)="delete(company)" src="../assets/trash2.png"> 
+              <img class="right_icons" (click)="editService(company)" src="../assets/edit2.png">
+            </div>
+            <div class="section2"><br>
+            <h5>{{company.long_description}}</h5><br>  
+            <div class="sd1">
+              <div class="sd11">
+                <h2>{{company.availability}}</h2>
+                <h5>Availability</h5>
+              </div>
+              <div class="sd12">
+                <h2>{{company.spaces}}</h2>
+                <h5>Spaces</h5>
+              </div>
+            </div> 
+            <div class="sd2">
+              <div class="sd21">
+                <h2>{{company.duration}}</h2>
+                <h5>Duration</h5>
+              </div>
+              <div class="sd22">
+                <h2>{{company.price}}</h2>
+                <h5>Price</h5>
+              </div>
+            </div>  
+          </div>
+        </div> 
+        <div *ngIf="company.key!=idclient" class="noRecords" >
+        </div> 
       </div>
     </div>
    </div>

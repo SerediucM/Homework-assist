@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "id": 101,
+      "name": "Mihaela",
+      "email": "mihaela_lala33@yahoo.com",
+      "password": "Sucshheav%33"
+    },
+    {
+      "name": "Mihaela",
+      "email": "test@assist.ro",
+      "password": "Assist@33333",
+      "id": 102
+    }
+  ],
+  "company": [
+    {
+      "id": 2,
+      "small_description": "Name test",
+      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
+      "availability": "Mon-Fri,10:00-16:00",
+      "spaces": "6 available",
+      "duration": "30 min",
+      "price": "10 Lei",
+      "key": "102"
+    },
+    {
+      "id": 1,
+      "small_description": "Name 233",
+      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum.",
+      "availability": "Mon-Fri,10:00-16:00",
+      "spaces": "6 available",
+      "duration": "30 min",
+      "price": "100 Lei",
+      "key": "102"
+    },
+    {
+      "id": 4,
+      "small_description": "This is one of the courses",
+      "long_description": "This is the long description for one of the courses",
+      "availability": "Mon-Fri,10:00-16:00",
+      "duration": "30 min",
+      "spaces": "4 available",
+      "price": "150 Lei",
+      "key": "100"
+    },
+    {
+      "id": 5,
+      "small_description": "Name sevice",
+      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum.",
+      "availability": "Mon-Fri,10:00-16:00",
+      "spaces": "6 available",
+      "duration": "30 min",
+      "price": "100 Lei",
+      "key": "102"
+    },
+    {
+      "id": 6,
+      "small_description": "This is one of the courses",
+      "long_description": "This is the long description for one of the courses",
+      "availability": "Mon-Fri,10:00-16:00",
+      "duration": "30 min",
+      "spaces": "4 available",
+      "price": "150 Lei",
+      "key": "100"
+    },
+    {
+      "id": 3,
+      "small_description": "This is one of the courses",
+      "long_description": "This is the long description for one of the courses",
+      "availability": "Mon-Fri,10:00-16:00",
+      "duration": "30 min",
+      "spaces": "4 available",
+      "price": "150 Lei",
+      "key": "100"
+    },
+    {
+      "id": 645,
+      "small_description": "Masa",
+      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum.",
+      "availability": "Tue-Fri,08:00-18:00",
+      "spaces": "2 available",
+      "duration": "10 h",
+      "price": "123 Lei",
+      "key": "102"
+    },
+    {
+      "id": 173,
+      "small_description": "Inmormantare",
+      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum.",
+      "availability": "Wed-Thu,08:00-15:00",
+      "spaces": "30 availability",
+      "duration": "2 h",
+      "price": "500 Lei",
+      "key": "102"
+    },
+    {
+      "id": 612,
+      "small_description": "Nunta",
+      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum.",
+      "availability": "Sat-Sun,20:00-08:00",
+      "spaces": "100 availability",
+      "duration": "12 h",
+      "price": "1000 Lei",
+      "key": "102"
+    }
+  ]
+}

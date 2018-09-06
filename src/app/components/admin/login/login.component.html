@@ -2,7 +2,7 @@
   <!-- login page -->
  <div  class="container   " *ngIf="loginContent" > 
      <img src="../assets/booking_logo.png" alt="book_img" class="book_img"/>
-     <div class="errGlobal alert-danger">{{errC}}</div>
+     <div class="errGlobal alert-danger">{{err}}</div>
      <form name="validformLogin"  #validformLogin="ngForm" class="div">
          <label class="date"> Email address </label>
          <input class="tbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=loginInputEmail  name="email"  #emaill= "ngModel" type="email">
@@ -33,28 +33,28 @@
      <div class="errGlobal alert-danger">{{errC}}</div>
      <form name="validformLogin"  #validformLogin="ngForm" class="div">
          <label class="date" >Your name</label>
-         <input class="tbox" required pattern="[A-Za-z\s]+$" [(ngModel)]=createinInputfirst name="firstName"  #firstName="ngModel" type="text" >
+         <input class="tbox" required pattern="[A-Za-z\s]+$" [(ngModel)]=createInputName name="firstName"  #firstName="ngModel" type="text" >
                  <!-- <input required pattern="[A-Za-z\s]+$" [(ngModel)]=createinInputfirst name="firstName"  #firstName="ngModel" (change)="log(firstName)" class = "rectangle-2a email-adress" type ="text" placeholder="  first name"> -->
              <div class="err-name-create  alert-danger" *ngIf="firstName.touched && !firstName.valid" >
                  <div *ngIf="firstName.errors.required">Name is required</div>
                  <div *ngIf="firstName.errors.pattern">Must contain only characters</div>
              </div> 
              <label class="date"> Email address </label>
-             <input class="tbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=loginInputEmail  name="email"  #emaill= "ngModel" type="email">
+             <input class="tbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=createInputEmail  name="email"  #emaill= "ngModel" type="email">
                      <!-- <input form-group required  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" class ="rectangle-2a email-adress"  (click)="log(emaill)"  type ="emaill"  [(ngModel)]=loginInputEmail  name="email"  #emaill= "ngModel"   placeholder="  email adress" >-->
              <div class="err-email-create alert-danger " *ngIf="emaill.touched  && !emaill.valid ">
                  <div *ngIf="emaill.errors.required ">Email is required</div>
                  <div *ngIf="emaill.errors.pattern  ">Email invalid</div>
              </div> 
              <label class="date">Password</label>
-             <input class="tbox space-between" type="{{showHidecreate ? 'password' : 'text'}}" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%.^#:;,\|+_-`~*?&])[A-Za-z\d$@$!%.^#;:,\|+_-`~*?&]{12,50}" [(ngModel)]=loginInputPassword name="passwordl" #passwordl= "ngModel">
+             <input class="tbox space-between" type="{{ 'text'}}" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%.^#:;,\|+_-`~*?&])[A-Za-z\d$@$!%.^#;:,\|+_-`~*?&]{12,50}" [(ngModel)]=createInputPassword name="passwordl" #passwordl= "ngModel">
                              <!-- <input required class = "rectangle-2a email-adress" type="{{pass}}" [(ngModel)]=loginInputPassword name="passwordl" #passwordl= "ngModel" (click)="log(passwordl)"placeholder="  password">-->
-             <i (mousedown)="showMyPassCreate()" class="fa {{ showHidecreate ? 'fa-eye' : 'fa-eye-slash'}} glyphicon glyphicon-eye-open visiblePassCreate "></i>
+             <!-- <i (mousedown)="showMyPassCreate()" class="fa {{ showHidecreate ? 'fa-eye' : 'fa-eye-slash'}} glyphicon glyphicon-eye-open visiblePassCreate "></i> -->
              <div [ngClass]="passwordl.errors.pattern ? 'err-password-createlong' : ''  " class="err-password-create  alert-danger" *ngIf="passwordl.touched && !passwordl.valid" >
                  <div *ngIf="passwordl.errors.required">Password is required</div>
                  <div *ngIf="passwordl.errors.pattern">It must contain upper-case, lower-case, numbers, special characters and length should be at least 8 characters</div>    
              </div>           
-             <input type="submit" (click)="loginUser()"  class="book_btn" [(disabled)]="!validformLogin.valid"  value="REGISTER">
+             <input type="submit" (click)="CreateUser()"  class="book_btn" [(disabled)]="!validformLogin.valid"  value="REGISTER">
                  <!-- <p class="forgot-password-res"><span class="text" >Recover password &nbsp;&nbsp;</span> -->
              <a  class="account-txt" (click)="manageForms(true, false, false)"><br>You already have an account?</a>
      </form>
