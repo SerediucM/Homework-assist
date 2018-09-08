@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Company } from '../../../shared/company';
+import { Service } from '../../../shared/Service';
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 @Component({
@@ -12,7 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class BookingsComponent implements OnInit {
 
   private idclient : string;
-  companys: {};
+  Services: {};
   constructor(private userService: ApiConnectionService,
     private rout:Router,
     private http: HttpClient,
@@ -27,10 +27,10 @@ export class BookingsComponent implements OnInit {
   ngOnInit() {
   }
   ngAfterViewInit():void {
-    this.userService.getCompany().subscribe(data => {
+    this.userService.getService().subscribe(data => {
       this.idclient = localStorage.getItem('id');
       console.log("key  ", this.idclient);
-      this.companys = data;
+      this.Services = data;
       console.log("data dashboard", data);
     })
     

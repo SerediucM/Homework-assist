@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "id": 101,
+      "id": 100,
       "name": "Mihaela",
       "email": "mihaela_lala33@yahoo.com",
       "password": "Sucshheav%33"
@@ -13,16 +13,16 @@
       "id": 102
     }
   ],
-  "company": [
+  "Service": [
     {
       "id": 2,
-      "small_description": "Name test",
+      "small_description": "Botez",
       "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
       "availability": "Mon-Fri,10:00-16:00",
       "spaces": "6 available",
       "duration": "30 min",
       "price": "10 Lei",
-      "key": "102"
+      "key": "1"
     },
     {
       "id": 1,
@@ -32,17 +32,17 @@
       "spaces": "6 available",
       "duration": "30 min",
       "price": "100 Lei",
-      "key": "102"
+      "key": "1"
     },
     {
       "id": 4,
-      "small_description": "This is one of the courses",
+      "small_description": "Scoala altfel",
       "long_description": "This is the long description for one of the courses",
       "availability": "Mon-Fri,10:00-16:00",
-      "duration": "30 min",
       "spaces": "4 available",
+      "duration": "30 min",
       "price": "150 Lei",
-      "key": "100"
+      "key": "3"
     },
     {
       "id": 5,
@@ -52,17 +52,7 @@
       "spaces": "6 available",
       "duration": "30 min",
       "price": "100 Lei",
-      "key": "102"
-    },
-    {
-      "id": 6,
-      "small_description": "This is one of the courses",
-      "long_description": "This is the long description for one of the courses",
-      "availability": "Mon-Fri,10:00-16:00",
-      "duration": "30 min",
-      "spaces": "4 available",
-      "price": "150 Lei",
-      "key": "100"
+      "key": "1"
     },
     {
       "id": 3,
@@ -72,17 +62,7 @@
       "duration": "30 min",
       "spaces": "4 available",
       "price": "150 Lei",
-      "key": "100"
-    },
-    {
-      "id": 645,
-      "small_description": "Masa",
-      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum.",
-      "availability": "Tue-Fri,08:00-18:00",
-      "spaces": "2 available",
-      "duration": "10 h",
-      "price": "123 Lei",
-      "key": "102"
+      "key": "3"
     },
     {
       "id": 173,
@@ -92,7 +72,7 @@
       "spaces": "30 availability",
       "duration": "2 h",
       "price": "500 Lei",
-      "key": "102"
+      "key": "1"
     },
     {
       "id": 612,
@@ -102,7 +82,67 @@
       "spaces": "100 availability",
       "duration": "12 h",
       "price": "1000 Lei",
-      "key": "102"
+      "key": "1"
+    },
+    {
+      "id": 141,
+      "small_description": "Cina",
+      "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. Quisque luctus leo quam, a fermentum tellus ullamcorper et. Quisque blandit imperdiet felis at fermentum. Vestibulum sit amet erat augue. Sed sed malesuada nibh. Nunc sollicitudin tristique diam et tempus. Sed sagittis vitae nisl quis vestibulum.",
+      "availability": "Mon-Sun,06:00-22:00",
+      "spaces": "30 availability",
+      "duration": "12 min",
+      "price": "12 Lei",
+      "key": "1"
+    },
+    {
+      "id": 730,
+      "small_description": "Spalatorie",
+      "long_description": "To access Booking App user is need to Login using an username and password. For an unregistered user there is option to register by providing the following info: first name, last name, email, password . After registration an confirmation email is sent to provided email address. User is able to recover forgotten or reset password based on email address, an email with link to reset password will be sent on provided email of an registered user. In case someone try to reset password with an unregistered email address, an message will be displayed with a suggestion to create an account/register.",
+      "availability": "Mon-Fri,00:00-18:00",
+      "spaces": "6 availability",
+      "duration": "1 h",
+      "price": "300 Lei",
+      "key": "2"
+    },
+    {
+      "id": 285,
+      "small_description": "Cina weekend",
+      "long_description": "To access Booking App user is need to Login using an username and password. For an unregistered user there is option to register by providing the following info: first name, last name, email, password . After registration an confirmation email is sent to provided email address. User is able to recover forgotten or reset password based on email address, an email with link to reset password will be sent on provided email of an registered user. In case someone try to reset password with an unregistered email address, an message will be displayed with a suggestion to create an account/register.",
+      "availability": "Fri-Sun,19:00-12:00",
+      "spaces": "56 availability",
+      "duration": "90 min",
+      "price": "200 Lei",
+      "key": "2"
+    }
+  ],
+  "company": [
+    {
+      "id": 1,
+      "name": "Dell",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
+      "logo": {},
+      "admin": "102"
+    },
+    {
+      "id": 3,
+      "name": "Evenimente 2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
+      "logo": "index.jpeg",
+      "admin": "102"
+    },
+    {
+      "id": 4,
+      "name": "Evenimente 3",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
+      "logo": "index.jpeg",
+      "admin": "102"
+    },
+    {
+      "id": 2,
+      "name": "Scoala",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
+      "logo": "images.png",
+      "admin": "100"
     }
   ]
 }

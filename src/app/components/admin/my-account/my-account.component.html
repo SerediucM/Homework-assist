@@ -2,26 +2,26 @@
 <section class="section">
   <form name="validformAccount"  #validformAccount="ngForm">
     <div class="logo">
-      <img src="{{file ? './assets/' + file.name : '../assets/company_logo.png'}}"/>
-      <input type="file" class="choosefile submit_button" (change)="handleFileSelect($event)"  #fileInput style="cursor:pointer"/>
+      <img  src="{{file ? './assets/' + file.name : '../assets/company_logo.png'}}"/>
+      <input  type="file" class="choosefile submit_button" (change)="handleFileSelect($event)"  #fileInput style="cursor:pointer"/>
     </div>
     <div class="profile"> 
         <label class="date">Company name</label>
-        <input type="text" class="tbox" required [(ngModel)]=loginInputPassword name="companyName" #companyName= "ngModel"/><br><br>
+        <input type="text" class="tbox" required [(ngModel)]="name" name="companyName" #companyName= "ngModel"/><br><br>
         <div class="err-companyName  alert-danger" *ngIf="companyName.touched && !companyName.valid" >
             <div *ngIf="companyName.errors.required">Password is required</div>
         </div>
       <div class="company_description">
         <label class="date">Company description</label>
-        <textarea required [(ngModel)]=loginInputP name="companyDescription" #companyDescription= "ngModel"></textarea >
+        <textarea required [(ngModel)]=description name="companyDescription" #companyDescription= "ngModel"></textarea >
         <div class="err-companyDescription  alert-danger" *ngIf="companyDescription.touched && !companyDescription.valid" >
             <div *ngIf="companyDescription.errors.required">Password is required</div>
         </div>
       </div>
       <div class="buttons">
-        <button class="book_btn btn btn-secondary" style="float:left" >Sign out</button>
+        <button (click)="logout()" class="book_btn btn btn-secondary" style="float:left" >Sign out</button>
         <div class="form-group" >
-          <button type="submit"  style="float: right" class="book_btn" [(disabled)]="!validformAccount.valid" >Save</button> 
+          <button type="submit" (click)="save()"  style="float: right" class="book_btn" [(disabled)]="!validformAccount.valid" >Save</button> 
         </div>
       </div>
     </div> 

@@ -1,10 +1,8 @@
 export interface Company {
-  id: number,
-  small_description: string,
-  long_description: string,
-  availability: string,
-  duration: string,
-  spaces: string,
-  price: string ,
-  key: number
-}
+    id: number,
+    name: string,
+    description: string,
+    logo : string,
+    admin : number
+    
+  }

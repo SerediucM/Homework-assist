@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Company } from '../../../shared/company';
+import { Service } from '../../../shared/Service';
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -14,6 +14,7 @@ import { HttpClient } from '@angular/common/http';
 export class DashboardComponent implements OnInit {
 
   private idclient : string;
+  Services: {};
   private small_description : string;
   private long_description : string;
   private availability : string;
@@ -21,8 +22,8 @@ export class DashboardComponent implements OnInit {
   private duration : string;
   private prices : string;
   private key : string;
-  companys: {};
-  public company: Company[];
+
+  public Service: Service[];
   public show: boolean = false;
   constructor(private userService: ApiConnectionService,
               private rout:Router,
@@ -32,10 +33,10 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
   }
   ngAfterViewInit():void {
-    this.userService.getCompany().subscribe(data => {
-      this.idclient = localStorage.getItem('id');
+    this.userService.getService().subscribe(data => {
+      this.idclient = localStorage.getItem('id-company');
       console.log("key  ", this.idclient);
-      this.companys = data;
+      this.Services = data;
       console.log("data dashboard", data);
     })
     
@@ -45,7 +46,7 @@ export class DashboardComponent implements OnInit {
   }
   editService(comp){
     this.show = !this.show;
-    this.userService.getCompany().subscribe(data => {
+    this.userService.getService().subscribe(data => {
     localStorage.setItem('id-service', comp.id);
     for(let item of data)
     {
@@ -69,17 +70,15 @@ export class DashboardComponent implements OnInit {
       spaces : this.spaces,
       duration : this.duration,
       price : this.prices,
-      key : localStorage.getItem('id')
+      key : localStorage.getItem('id-company')
       };
     this.userService.putUpdate( updateService as any).subscribe();
-    localStorage.removeItem('id-service');
     window.location.reload();
     }
   delete(comp){
     localStorage.setItem('id-service', comp.id);
-    this.userService.deleteCompany( comp.id ).subscribe();
+    this.userService.deleteService( comp.id ).subscribe();
     window.location.reload();
-    localStorage.removeItem('id-service');
   }
 
 

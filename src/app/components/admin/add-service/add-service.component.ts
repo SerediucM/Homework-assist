@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Company } from '../../../shared/company';
+// import { Service } from '../../../shared/Service';
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 @Component({
@@ -43,7 +43,7 @@ export class AddServiceComponent implements OnInit {
       spaces : this.spaces,
       duration : this.duration,
       price : this.price,
-      key : localStorage.getItem('id')
+      key : localStorage.getItem('id-company')
       };
     this.userService.addServer( newService as any).subscribe();
     window.location.reload();

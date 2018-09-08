@@ -17,7 +17,8 @@ import { CalendarComponent } from './components/admin/calendar/calendar.componen
 import { MyAccountComponent } from './components/admin/my-account/my-account.component';
 import { MakeBookingsComponent } from './components/clients/make-bookings/make-bookings.component';
 import { AddServiceComponent } from './components/admin/add-service/add-service.component';
-import { ModalComponent } from './modal/modal.component'
+import { ModalComponent } from './modal/modal.component';
+import { CompanyComponent } from './components/admin/company/company.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'calendar', component: CalendarComponent },
   { path: 'account', component: MyAccountComponent },
   { path: 'makebooking', component: MakeBookingsComponent },
+  { path: 'company', component: CompanyComponent },
   { path: 'addservice', component: AddServiceComponent },
   { path: '**', redirectTo: 'login' }
 ];
@@ -38,9 +40,10 @@ const routes: Routes = [
     CalendarComponent,
     MyAccountComponent,
     MakeBookingsComponent,
-    MakeBookingsComponent,
+    CompanyComponent,
     AddServiceComponent,
-    ModalComponent
+    ModalComponent,
+    CompanyComponent
     ],
   imports: [
     NgbModule.forRoot(),

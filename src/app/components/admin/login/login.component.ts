@@ -54,7 +54,7 @@ export class LoginComponent implements OnInit {
               console.log("Citire db", item.id );
               localStorage.setItem('id', item.id);
               console.log("Citire localStorage", localStorage.getItem('id') );
-              this.rout.navigate(['dashboard']);
+              this.rout.navigate(['company']);
               gotResult=true;
   
             } else if (this.loginInputEmail==item.email && this.loginInputPassword!=item.password) {
