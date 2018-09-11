@@ -8,7 +8,11 @@
           <tr class="left_row">
             <td><h5>Name</h5><input  type="text" name="your_name"></td>
             <td><div class="space"></div></td>
-            <td><h5>Email</h5><input  type="text" name="your_email"></td>
+            <td><h5>Email</h5><input required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=createInputEmail  name="email"  #emaill= "ngModel" type="text" name="your_email"></td>
+            <div class="alert-danger " *ngIf="emaill.touched  && !emaill.valid ">
+              <div *ngIf="emaill.errors.required ">Email is required</div>
+              <div *ngIf="emaill.errors.pattern  ">Email invalid</div>
+          </div> 
           </tr>
           <tr class="left_row">
             <td><div class="space"></div></td>
@@ -165,7 +169,8 @@
         </tr>
         <tr>
           <th><button  class="close_btn" (click)="manageForms(true, false, false)" >BACK</button></th>
-          <th><button  class="send_book_btn" (click)="manageForms(false, true, false)" >SEND BOOKING </button></th>
+          <th><button  class="send_book_btn" (click)="manageForms(false, true, false)">SEND BOOKING </button></th>
+          <a href="mailto:mihaela.serediuc96@gmail.com?subject=SweetWords">email me</a>
         </tr>
     </table>
   </div>

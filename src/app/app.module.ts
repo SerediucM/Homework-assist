@@ -18,7 +18,8 @@ import { MyAccountComponent } from './components/admin/my-account/my-account.com
 import { MakeBookingsComponent } from './components/clients/make-bookings/make-bookings.component';
 import { AddServiceComponent } from './components/admin/add-service/add-service.component';
 import { ModalComponent } from './modal/modal.component';
-import { CompanyComponent } from './components/admin/company/company.component'
+import { CompanyComponent } from './components/admin/company/company.component';
+import { CompanyClientComponent } from './components/clients/company-client/company-client.component'
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   { path: 'makebooking', component: MakeBookingsComponent },
   { path: 'company', component: CompanyComponent },
   { path: 'addservice', component: AddServiceComponent },
+  { path: 'companys', component: CompanyClientComponent},
   { path: '**', redirectTo: 'login' }
 ];
 @NgModule({
@@ -43,7 +45,8 @@ const routes: Routes = [
     CompanyComponent,
     AddServiceComponent,
     ModalComponent,
-    CompanyComponent
+    CompanyComponent,
+    CompanyClientComponent
     ],
   imports: [
     NgbModule.forRoot(),

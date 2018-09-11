@@ -21,6 +21,7 @@ export class MyAccountComponent implements OnInit {
   private name : string;
   private logo: string;
   public fileslogo:File;
+  private option: string;
 
   constructor(private userService: ApiConnectionService,
     private rout:Router,
@@ -45,15 +46,30 @@ export class MyAccountComponent implements OnInit {
     }) 
   }
   save(){
-    var editCompany = {
-      id: localStorage.getItem('id-company'),
-      name : this.name,
-      description : this.description,
-      logo : this.file,
-      admin : localStorage.getItem('id')
-      };
-      this.userService.editCompany(editCompany as any).subscribe();
-      window.location.reload();
+    if( localStorage.getItem('id-company') == "0" )
+    {
+      var addCompany = {
+        id: Math.floor(Math.random()*1000).toString(),
+        name : this.name,
+        description : this.description,
+        logo : this.file,
+        admin : localStorage.getItem('id')
+        };
+        this.userService.addCompany(addCompany as any).subscribe();
+        window.location.reload();
+    }
+    else {
+      var editCompany = {
+        id: localStorage.getItem('id-company'),
+        name : this.name,
+        description : this.description,
+        logo : this.file,
+        admin : localStorage.getItem('id')
+        };
+        this.userService.editCompany(editCompany as any).subscribe();
+        window.location.reload();
+    }
+    
   }
   logout(){
     localStorage.removeItem('id');

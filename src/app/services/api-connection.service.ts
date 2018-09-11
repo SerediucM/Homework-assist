@@ -57,4 +57,8 @@ export class ApiConnectionService {
     const urlP = `${this. urlService}`;
      return this.http.post<Service>(urlP , Service);
    }
+   addCompany( comp:Company): Observable<Company>{
+    const urlP = `${this. url}`;
+     return this.http.post<Company>(urlP + "/company" , comp);
+   }
 }

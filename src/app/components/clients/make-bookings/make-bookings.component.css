@@ -90,58 +90,55 @@
   width: 65%; 
 }
 .sd12{
-  float: left;
+  float: right;
   width: 30%;
-  margin-left: 80%;
-  margin-top: -24%;
 }
 .sd1 h2{
-    color: dimgray;
-    font-family: Arial;
-    font-size: 20px;
-    height: auto;
-    font-weight: bold;
+  color: dimgray;
+  font-family: Arial;
+  font-size: 19px;
+  height: auto;
+  font-weight: bold;
 }
 .sd1 h5{
-    font-size: 15px;
-    font-family: Arial;
-    color: #b3b3b3;
-    height: auto;
+  font-size: 14px;
+  font-family: Arial;
+  color: #b3b3b3;
+  height: auto;
 }
 .sd2{
   float:right;
   width: 50%;
-right: 0%;
 }
 .sd21{
-  float: right;
+  float: left;
   width: 30%; 
   margin-left: 20%;
 }
 .sd22{
-  float: right;
+  float: left;
   width: 20%; 
-  /* margin-left: 10%; */
+  margin-left: 20%;
 }
 .sd2 h2{
-   color: dimgray;
-   font-family: Arial;
-   font-size: 20px;
-   height: auto;
-   font-weight: bold;
+ color: dimgray;
+ font-family: Arial;
+ font-size: 19px;
+ height: auto;
+ font-weight: bold;
 }
 .sd2 h5{
-  font-size: 15px;
-  font-family: Arial;
-  color: #b3b3b3;
-  height: auto;
-  margin: 0 auto;
+font-size: 14px;
+font-family: Arial;
+color: #b3b3b3;
+height: auto;
+margin: 0 auto;
 }
 h5{
-  font-size: 17px;
-  font-family: Arial;
-  color: #b3b3b3;
-  line-height: 22px;
+font-size: 17px;
+font-family: Arial;
+color: #b3b3b3;
+line-height: 22px;
 
 }
 
@@ -151,7 +148,7 @@ h5{
    border-radius: 3px;
    background: #c97ce5 ;
    border: 0px;
-   font-size: 20px;
+   font-size: 100%;
    color: #fff;
    font-family: Arial;
    

@@ -16,7 +16,7 @@
   "Service": [
     {
       "id": 2,
-      "small_description": "Botez",
+      "small_description": "Botez 1",
       "long_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
       "availability": "Mon-Fri,10:00-16:00",
       "spaces": "6 available",
@@ -113,6 +113,16 @@
       "duration": "90 min",
       "price": "200 Lei",
       "key": "2"
+    },
+    {
+      "id": 852,
+      "small_description": "Inchirieri 1",
+      "long_description": "Although discouraged by ECMAScript 3 and forbidden by ECMAScript 5, many implementations interpret a numeric string beginning with a leading 0 as octal. The following may have an octal result, or it may have a decimal result. Always specify a radix to avoid this unreliable behavior.",
+      "availability": "Mon-Thu,02:01-12:00",
+      "spaces": "4",
+      "duration": "10 h",
+      "price": "567 Lei",
+      "key": "913"
     }
   ],
   "company": [
@@ -143,6 +153,12 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nulla nisl, pretium in sagittis finibus, consectetur aliquet dolor. Maecenas non tincidunt urna. Proin eu magna eget purus dapibus convallis. Phasellus rutrum nibh et velit varius, a molestie diam lobortis. ",
       "logo": "images.png",
       "admin": "100"
+    },
+    {
+      "id": "913",
+      "name": "LG",
+      "description": "Although discouraged by ECMAScript 3 and forbidden by ECMAScript 5, many implementations interpret a numeric string beginning with a leading 0 as octal. The following may have an octal result, or it may have a decimal result. Always specify a radix to avoid this unreliable behavior.",
+      "admin": "102"
     }
   ]
 }

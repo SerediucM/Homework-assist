@@ -6,7 +6,7 @@
           <div class="top">
               <form  action="Dashboard_v1">
                 <br><h3 class="title">Add new service</h3>
-                <input type="submit" (click)="addService()" value="+" class="add" [(disabled)]="!validformAccount.valid"><br>
+                <input type="submit" (click)="addService()" value="+" class="add btn btn-lg" [(disabled)]="!validformAccount.valid"><br>
                 <h5 class="service">Add service</h5><br>
                 <h5 class="details">SERVICE DETAILS</h5>
               </form>
@@ -26,7 +26,7 @@
               </form>
           </div>
           <div class="right">
-            <form name="validformAccount"  #validformAccount="ngForm">
+            <form >
               <h5 class="text">Service duration</h5><br>
               <input type="text" class="tbox" required [(ngModel)]=duration name="serviceDuration" #serviceDuration= "ngModel"><br>
               <div class="err-serviceName  alert-danger" *ngIf="serviceDuration.touched && !serviceDuration.valid" >
@@ -45,7 +45,7 @@
             </form>
           </div>
       </div>
-      <form class="section1" >
+      <form class="section1" name="validformAccount"  #validformAccount="ngForm" >
         <h5 class="details_availability">AVAILABILITY</h5>
         <div class="left " >
           <h5 class="text">Enter a date and time </h5><br>

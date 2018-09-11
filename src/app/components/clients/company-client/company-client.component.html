@@ -1,0 +1,17 @@
+<div class="dashboard_v1">
+  <section class="section1">
+    <div  *ngFor="let company of Companys"  class="service_box">
+
+        <div class="title">
+          <h1>{{company.name}}</h1>
+        </div>
+        <section class="section2">
+          <img class="logo col-sm-12" src=" ../assets/company_logo.png"/>
+          <h5 class="col-sm-12" style="width:70%; float:right">{{company.description }}</h5>
+          <button class="btn btn-lg btn-outline-primary book_btn" (click)="open(company)" style="margin-bottom: 20px;">OPEN</button>
+        </section>
+       
+
+    </div>
+  </section>
+</div>

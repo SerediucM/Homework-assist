@@ -7,11 +7,11 @@ import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-company',
-  templateUrl: './company.component.html',
-  styleUrls: ['./company.component.css']
+  selector: 'app-company-client',
+  templateUrl: './company-client.component.html',
+  styleUrls: ['./company-client.component.css']
 })
-export class CompanyComponent implements OnInit {
+export class CompanyClientComponent implements OnInit {
 
   constructor(private userService: ApiConnectionService,
     private rout:Router,
@@ -37,8 +37,9 @@ export class CompanyComponent implements OnInit {
   }
   open(company){
     console.log("company " , company.name);
-    localStorage.setItem('id-company', company.id);
-    this.rout.navigate(['dashboard']);
+    localStorage.setItem('id-company-client', company.id);
+    this.rout.navigate(['makebooking']);
 
   }
+
 }

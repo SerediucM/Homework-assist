@@ -20,7 +20,7 @@
          </div>
              <!-- <span class="visiblePass"><i (click)="VisiblePass()" class="glyphicon glyphicon-eye-open"></i></span> -->
                  <!-- <input class = "rectangle-2b btn btn-primary sign-in" [(disabled)]="!validformLogin.valid" type="submit" value="SIGN IN"> -->
-         <input type="submit" (click)="loginUser()"  class="book_btn" [(disabled)]="!validformLogin.valid"  value="LOGIN">
+         <input type="submit" (click)="loginUser()"  class="book_btn btn-lg  btn " [(disabled)]="!validformLogin.valid"  value="LOGIN">
                  <!-- <p class="forgot-password-res"><span class="text" >Recover password &nbsp;&nbsp;</span> -->
          <a  class="recover-password-txt" (click)="manageForms(false, false, true)"><br>Recover password</a>
          <a  class="register-txt" (click)="manageForms(false, true, false)"><br>Register</a>
@@ -54,7 +54,7 @@
                  <div *ngIf="passwordl.errors.required">Password is required</div>
                  <div *ngIf="passwordl.errors.pattern">It must contain upper-case, lower-case, numbers, special characters and length should be at least 8 characters</div>    
              </div>           
-             <input type="submit" (click)="CreateUser()"  class="book_btn" [(disabled)]="!validformLogin.valid"  value="REGISTER">
+             <input type="submit" (click)="CreateUser()"  class="book_btn btn-lg  btn  " [(disabled)]="!validformLogin.valid"  value="REGISTER">
                  <!-- <p class="forgot-password-res"><span class="text" >Recover password &nbsp;&nbsp;</span> -->
              <a  class="account-txt" (click)="manageForms(true, false, false)"><br>You already have an account?</a>
      </form>
@@ -73,7 +73,7 @@
          </div> 
              <!-- <span class="visiblePass"><i (click)="VisiblePass()" class="glyphicon glyphicon-eye-open"></i></span> -->
                  <!-- <input class = "rectangle-2b btn btn-primary sign-in" [(disabled)]="!validformLogin.valid" type="submit" value="SIGN IN"> -->
-         <input type="submit" (click)="loginUser()"  class="book_btn" [(disabled)]="!validformLogin.valid"  value="RECOVER">
+         <input type="submit" (click)="loginUser()"  class="book_btn btn-lg  btn" [(disabled)]="!validformLogin.valid"  value="RECOVER">
                  <!-- <p class="forgot-password-res"><span class="text" >Recover password &nbsp;&nbsp;</span> -->
      </form>
  </div>
