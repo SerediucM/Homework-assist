@@ -28,33 +28,6 @@
     top: 39%;
     width: 25%;
 }
-.top{
-    margin: 0 auto;
-    margin-top: 5%;
-    height:150px;  
-}
-.add{
-    margin-right: 10px;
-    float:right;
-    border-radius: 100%;
-    border: none;
-    height: 80px;
-    width: 80px;
-    background-color: #c97ce5;
-    color:white;
-    font-size: 50px ;
-    cursor: pointer;
-}
-.service{
-    margin-top: 10px;
-    color:dimgray;
-    font-family: Arial;
-    font-size: 17px;
-    font-weight: bold;
-    display:inline-block ;
-    float:right;
-    clear: right;
-}
 .service_box{
     background: #fff;
     width: 100%;

@@ -1,56 +1,48 @@
-<div id="booking">
+<div class="booking">
   <!-- begin of head section -->
   <div class="head" >
     <table>
-  <tr>
-    <th class="co_logo">
-      <img src="../assets/company_logo.png">
-    </th>
-    <th class="co_info">
-      <h1>{{name}}</h1>
-      <p>{{description}}</p>
-    </th>
-  </tr>
-</table>
+      <tr>
+        <th class="co_logo">
+          <img src="../assets/company_logo.png">
+        </th>
+        <th class="co_info">
+          <h1>{{name}}</h1>
+          <p>{{description}}</p>
+        </th>
+      </tr>
+    </table>
   </div>
-    <div  *ngFor="let item of servises" >
-      <div *ngIf="item.key==idclient" class="service_box" >
-  <div class="title">
-      <h1>{{item.small_description}}</h1>
-      <!-- <img class="right_icons" src="../assets/trash.png"> 
-      <img class="right_icons" src="../assets/edit.png"> -->
+  <div  *ngFor="let item of servises" >
+    <div *ngIf="item.key==idclient" class="service_box" >
+      <div class="title">
+        <h1>{{item.small_description}}</h1>
       </div>
-    <div class="section2">
-      
-      <br>
-      <h5>{{item.long_description}}</h5>
-      <br>  
-      <div class="sd1">
-        <div class="sd11">
-          <h2>{{item.availability}}</h2>
-          <h5>Availability</h5><br>
-        </div>
-
-        <div class="sd12">
-          <h2>{{item.spaces}}</h2>
-          <h5>Spaces</h5>
-        </div>
-        <app-modal></app-modal>
-      </div> 
-
-      <div class="sd2">
-        <div class="sd21">
-          <h2>{{item.duration}}</h2>
-          <h5>Duration</h5>
-        </div>
-
-        <div class="sd22">
-          <h2>{{item.price}}</h2>
-          <h5>Price</h5>
-        </div>
-      </div>  
+      <div class="section2"><br>
+        <h5>{{item.long_description}}</h5><br>  
+        <div class="sd1">
+          <div class="sd11">
+            <h2>{{item.availability}}</h2>
+            <h5>Availability</h5><br>
+          </div>
+          <div class="sd12">
+            <h2>{{item.spaces}}</h2>
+            <h5>Spaces</h5>
+          </div>
+          <app-modal></app-modal>
+        </div> 
+        <div class="sd2">
+          <div class="sd21">
+            <h2>{{item.duration}}</h2>
+            <h5>Duration</h5>
+          </div>
+          <div class="sd22">
+            <h2>{{item.price}}</h2>
+            <h5>Price</h5>
+          </div>
+        </div>  
+      </div>
     </div>
-  </div>
   </div>
  </div>
 

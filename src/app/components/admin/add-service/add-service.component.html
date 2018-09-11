@@ -3,47 +3,47 @@
   <div class="col-lg-11" style="left: 5%">
     <div class="add_service">
       <div class="section1">
-          <div class="top">
-              <form  action="Dashboard_v1">
-                <br><h3 class="title">Add new service</h3>
-                <input type="submit" (click)="addService()" value="+" class="add btn btn-lg" [(disabled)]="!validformAccount.valid"><br>
-                <h5 class="service">Add service</h5><br>
-                <h5 class="details">SERVICE DETAILS</h5>
-              </form>
-          </div>
-          <div class="left">
-              <form action="">
-                <h5 class="text">Service name</h5><br>
-                <input type="text" class="tbox" required [(ngModel)]=small_description name="serviceName" #serviceName= "ngModel" ><br>
-                <div class="err-serviceName  alert-danger" *ngIf="serviceName.touched && !serviceName.valid" >
-                    <div *ngIf="serviceName.errors.required">Password is required</div>
-                </div>
-                <h5 class="text">Service description</h5><br>
-                <textarea class="tbox_mare" required [(ngModel)]=long_description name="serviceDescription" #serviceDescription= "ngModel" ></textarea>
-                <div class="err-serviceName  alert-danger" *ngIf="serviceDescription.touched && !serviceDescription.valid" >
-                    <div *ngIf="serviceDescription.errors.required">Password is required</div>
-                </div>
-              </form>
-          </div>
-          <div class="right">
-            <form >
-              <h5 class="text">Service duration</h5><br>
-              <input type="text" class="tbox" required [(ngModel)]=duration name="serviceDuration" #serviceDuration= "ngModel"><br>
-              <div class="err-serviceName  alert-danger" *ngIf="serviceDuration.touched && !serviceDuration.valid" >
-                  <div *ngIf="serviceDuration.errors.required">Password is required</div>
-              </div>
-              <h5 class="text">Spaces</h5><br>
-              <input type="text"  required [(ngModel)]=spaces name="serviceSpaces" #serviceSpaces= "ngModel" class="tbox"><br>
-              <div class="err-serviceName  alert-danger" *ngIf="serviceSpaces.touched && !serviceSpaces.valid" >
-                  <div *ngIf="serviceSpaces.errors.required">Password is required</div>
-              </div>
-              <h5 class="text">Price</h5><br>
-              <input type="value"  required [(ngModel)]=price name="servicePrice" #servicePrice= "ngModel" class="tbox"><br>
-              <div class="err-serviceName  alert-danger" *ngIf="servicePrice.touched && !servicePrice.valid" >
-                  <div *ngIf="servicePrice.errors.required">Password is required</div>
-              </div>
-            </form>
-          </div>
+        <div class="top">
+          <form  action="Dashboard_v1">
+            <br><h3 class="title">Add new service</h3>
+            <input type="submit" (click)="addService()" value="+" class="add btn btn-lg" [(disabled)]="!validformAccount.valid"><br>
+            <h5 class="service">Add service</h5><br>
+            <h5 class="details">SERVICE DETAILS</h5>
+          </form>
+        </div>
+        <div class="left">
+          <form action="">
+            <h5 class="text">Service name</h5><br>
+            <input type="text" class="tbox" required [(ngModel)]=small_description name="serviceName" #serviceName= "ngModel" ><br>
+            <div class="err-serviceName  alert-danger" *ngIf="serviceName.touched && !serviceName.valid" >
+                <div *ngIf="serviceName.errors.required">Password is required</div>
+            </div>
+            <h5 class="text">Service description</h5><br>
+            <textarea class="tbox_mare" required [(ngModel)]=long_description name="serviceDescription" #serviceDescription= "ngModel" ></textarea>
+            <div class="err-serviceName  alert-danger" *ngIf="serviceDescription.touched && !serviceDescription.valid" >
+              <div *ngIf="serviceDescription.errors.required">Password is required</div>
+            </div>
+          </form>
+        </div>
+        <div class="right">
+          <form >
+            <h5 class="text">Service duration</h5><br>
+            <input type="text" class="tbox" required [(ngModel)]=duration name="serviceDuration" #serviceDuration= "ngModel"><br>
+            <div class="err-serviceName  alert-danger" *ngIf="serviceDuration.touched && !serviceDuration.valid" >
+              <div *ngIf="serviceDuration.errors.required">Password is required</div>
+            </div>
+             <h5 class="text">Spaces</h5><br>
+            <input type="text"  required [(ngModel)]=spaces name="serviceSpaces" #serviceSpaces= "ngModel" class="tbox"><br>
+            <div class="err-serviceName  alert-danger" *ngIf="serviceSpaces.touched && !serviceSpaces.valid" >
+              <div *ngIf="serviceSpaces.errors.required">Password is required</div>
+            </div>
+            <h5 class="text">Price</h5><br>
+            <input type="value"  required [(ngModel)]=price name="servicePrice" #servicePrice= "ngModel" class="tbox"><br>
+            <div class="err-serviceName  alert-danger" *ngIf="servicePrice.touched && !servicePrice.valid" >
+              <div *ngIf="servicePrice.errors.required">Password is required</div>
+            </div>
+          </form>
+        </div>
       </div>
       <form class="section1" name="validformAccount"  #validformAccount="ngForm" >
         <h5 class="details_availability">AVAILABILITY</h5>

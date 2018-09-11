@@ -1,5 +1,40 @@
-.hugeModal  {
-    max-width: 200% ;
+
+.mb-3{
+	border-radius: 3%;
+	font-size: 1.16em;
+	background-color: rgb(250, 250, 250);
+  height:55px !important;
+  border-radius: 4px;
+  margin-top: 5%;
+  width: 100%;
+  
+}
+.tbox{
+  margin-top: 5%;
+  font-size: 20px;
+  height: 55px;
+  width:  100%;
+  border-radius: 4px;
+  border: 1px solid #b3b3b3;
+  padding-left: 2%;
+  color:rgba(17, 17, 17, 0.74);
+  margin-bottom: 1rem !important; 
+}
+.left{
+  width: 100%;
+  float: left;
+  margin-bottom: 10%;
+  text-align: left;
+}
+.right{  
+  width: 100%;
+  float: right;
+  margin-right: -12%;
+  margin-bottom: 10%;
+  text-align: left;
+}
+.err{
+  background: transparent;
 }
 .book_btn{
   width: 50%;
@@ -11,17 +46,6 @@
   color: #fff;
   font-family: Arial;   
 }
-.table3{
-  width: 100%;
-  font-family:Arial;
-  width: 211%;
-  border-spacing: 0;
-  border-collapse: separate;
-  table-layout: fixed;
-  margin-bottom: 50px;
-  border: 1px solid dimgray;
-  padding: 4%;    
-}
 .table2{
   margin-left: -15%;
   margin-top: -5%
@@ -30,9 +54,7 @@ tr{
   color:dimgray;
   font-size: 17px
 }
-.short{
-  margin-left: -205%;
-}
+
 .sp_book_btn{
   width: 350px;
   height: 55px;
@@ -55,33 +77,7 @@ tr{
   color: #fff;
   font-family: Arial;
 }
-  /* begin of modal section */ 
-.modal-footer{
-  display: none;
-}
-.modal-header{
-  border: 0px;
-}
-.modal1 .modal-dialog{
-  max-width: 1050px;
-  margin-top: 11%;
-  border: none;
-}
-.modal1 .modal-dialog h1{
-  color: #c97ce5;
-  font-size: 30px;
-  font-family: Arial;
-  font-weight: bold;
-  text-align: center;
-}
-.modal1 .modal-dialog h2{
-  color: #868686;
-  text-align: center;
-  font-size: 14px;
-  font-family: Arial;
-  font-weight: normal;
-  margin-bottom: 80px;
-}
+
 .make-your-booking{
   color: #c97ce5;
   font-size: 30px;
@@ -109,10 +105,7 @@ tr{
   color: #fff;
   font-family: Arial;
 }
-.content_for_modal{
-  margin-top: -20px;
-}
-  /* BEGIN FIRST MODAL CONTENT */
+
 .first_content{
   width: 68%;
   margin: 0 auto;
@@ -138,8 +131,6 @@ tr{
 .spacev2{
   height: 25px;
 }  
-  /* END FIRST MODAL CONTENT */
-  /* BEGIN SECOND MODAL CONTENT */
 .second_content{
   width: 68%;
   margin: 0 auto;
@@ -161,8 +152,6 @@ tr{
   margin-left: -15%;
   top:-30px;
 } 
-  /* END SECOND MODAL CONTENT */
-  /* BEGIN THIRD MODAL CONTENT */
 .third_content{
   width: 68%;
   margin: 0 auto;
@@ -186,21 +175,4 @@ tr{
 .sent_img{
   padding-top: 15%;
 }
-.validation{
-  margin-top: 15px;
-  padding: 5px;
-  color: #e52626;
-  font-weight: normal;
-}
-#empty_name {
-  display: none;
-} 
-#empty_phone {
-  display: none;
-}
-#empty_email {
-  display: none;
-}
-#letters_phone {
-  display: none;
-}
+

@@ -56,18 +56,25 @@ textarea{
     border-radius: 3px;
     margin-top: 20px;
 }
-
+.close_btn{
+    width: 45%;
+    height: 55px;
+    border-radius: 3px;
+    background: #DCDCDC;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+  }
 .logo img {
     width: 26%;
     border-radius: 50%;
 }
 .choosefile{
     position: absolute;
-    /* padding: 4%; */
     top: 116%;
     left: 4%;
     margin: 0 auto;
-    /* height: 50px; */
 }
 .choosefile input[type="file"]{
     background: #ff0000;

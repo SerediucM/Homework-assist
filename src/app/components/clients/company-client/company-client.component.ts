@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
-import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Company } from '../../../shared/company';
 import { Location } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 
@@ -14,9 +12,7 @@ import { HttpClient } from '@angular/common/http';
 export class CompanyClientComponent implements OnInit {
 
   constructor(private userService: ApiConnectionService,
-    private rout:Router,
-    private http: HttpClient,
-    private location: Location) { }
+    private rout:Router) { }
 
     private idclient : string;
     Companys: {};
@@ -39,7 +35,6 @@ export class CompanyClientComponent implements OnInit {
     console.log("company " , company.name);
     localStorage.setItem('id-company-client', company.id);
     this.rout.navigate(['makebooking']);
-
   }
 
 }

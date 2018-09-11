@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 import {ApiConnectionService} from '../../../services/api-connection.service';
 import { User } from '../../../shared/admin';
 
@@ -13,9 +12,7 @@ import { User } from '../../../shared/admin';
 export class LoginComponent implements OnInit {
 
   users: User[];
-  constructor(private router: ActivatedRoute ,
-              private rout:Router,
-              private location: Location,
+  constructor(private rout:Router,
               private userService: ApiConnectionService) { }
   @ViewChild('login') loginForm: NgForm;
   @ViewChild('reset') resetForm: NgForm;
@@ -45,7 +42,6 @@ export class LoginComponent implements OnInit {
     console.log("this showHidecreate:", this.showHidecreate);
   }
   loginUser(){
-    console.log("Merge button LOGIN");
     var gotResult = false;
       this.userService.getUser().subscribe(data => {
         data.forEach(item => {
@@ -64,14 +60,13 @@ export class LoginComponent implements OnInit {
             } else if(this.loginInputEmail!=item.email && this.loginInputPassword!=item.password){
               this.err ="This account does not exist. Please register";
               this.secondMessage = false;
-              //gotResult=true;
+
             }
           }
         });
       });
   }
   CreateUser(){
-    console.log("Merge click");
     this.checkVerify=true;
       var userr ={
         id: Math.floor(Math.random()*1000) ,

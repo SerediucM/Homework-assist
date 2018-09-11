@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn} from '@angular/forms';
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -7,13 +8,30 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModalComponent implements OnInit {
 
+  form = new FormGroup({
+    food: new FormControl('lamb'),
+  });
+
   closeResult: string;
   public personalData = true;
     public calendarData = false;
     public sentData = false;
-    private element: any;
+    public myData=["Monday","Tuesday", "Wednesday","Thursday","Friday", "Saturday", "Sunday"]
+
+
   ngOnInit(){}
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal) {
+  }
+  minSelectedCheckboxes(min = 1) {
+    const validator: ValidatorFn = (formArray: FormArray) => {
+      const totalSelected = formArray.controls
+        .map(control => control.value)
+        .reduce((prev, next) => next ? prev + next : prev, 0);
+  
+      return totalSelected >= min ? null : { required: true };
+    };
+    return validator;
+}
 
   open(content) {
     this.manageForms(true,false,false);
@@ -22,20 +40,19 @@ export class ModalComponent implements OnInit {
     });
   }
 
-  // private getDismissReason(reason: any): string {
-  //   if (reason === ModalDismissReasons.ESC) {
-  //     return 'by pressing ESC';
-  //   } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-  //     return 'by clicking on a backdrop';
-  //   } else {
-  //     return  `with: ${reason}`;
-  //   }
-  // }
+  nextButton() {
+    this.manageForms(false, false, true);
+  }
+  send(){
+
+    this.manageForms(false, true, false);
+  }
   manageForms(_personalData : boolean, _sentData: boolean, _calendarData: boolean): void {
     this.personalData = _personalData;
     this.sentData = _sentData;
     this.calendarData = _calendarData;
   }
+
 
 
 }

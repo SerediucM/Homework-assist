@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
-import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
-// import { Service } from '../../../shared/Service';
-import { Location } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-add-service',
   templateUrl: './add-service.component.html',
@@ -12,7 +9,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AddServiceComponent implements OnInit {
 
-  private miniDate= Date();
   private startTime: string;
   private stopTime: string;
   private startDay: string;
@@ -26,15 +22,11 @@ export class AddServiceComponent implements OnInit {
   private key : string;
   public myData=["Monday","Tuesday", "Wednesday","Thursday","Friday", "Saturday", "Sunday"]
   constructor(private userService: ApiConnectionService,
-    private rout:Router,
-    private http: HttpClient,
-    private location: Location) { }
-  ngOnInit() {
-
-  }
+    private rout:Router) { }
+  ngOnInit() {}
   addService(){
     this.availability= this.startDay.substring(0, 3)+ "-"+ this.stopDay.substring(0, 3) +","+ this.startTime +"-" + this.stopTime;
-   console.log("substr", this.availability);
+    console.log("substr", this.availability);
     var newService = {
       id: Math.floor(Math.random()*1000),
       small_description : this.small_description,
@@ -50,5 +42,4 @@ export class AddServiceComponent implements OnInit {
     this.rout.navigate(['dashboard']);
      
   }
-
 }

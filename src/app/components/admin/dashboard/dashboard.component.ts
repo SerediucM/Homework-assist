@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
-import { NgForm } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Service } from '../../../shared/Service';
 import { Location } from '@angular/common';
@@ -26,12 +25,9 @@ export class DashboardComponent implements OnInit {
   public Service: Service[];
   public show: boolean = false;
   constructor(private userService: ApiConnectionService,
-              private rout:Router,
-              private http: HttpClient,
-              private location: Location) { }
+              private rout:Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   ngAfterViewInit():void {
     this.userService.getService().subscribe(data => {
       this.idclient = localStorage.getItem('id-company');
@@ -39,7 +35,6 @@ export class DashboardComponent implements OnInit {
       this.Services = data;
       console.log("data dashboard", data);
     })
-    
   }
   newService(){
     this.rout.navigate(['addservice']);
@@ -80,6 +75,4 @@ export class DashboardComponent implements OnInit {
     this.userService.deleteService( comp.id ).subscribe();
     window.location.reload();
   }
-
-
 }

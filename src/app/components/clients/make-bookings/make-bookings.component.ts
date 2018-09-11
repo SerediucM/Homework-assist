@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
-import { NgForm } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Company } from '../../../shared/company';
-import { Location } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-make-bookings',
@@ -18,12 +14,8 @@ export class MakeBookingsComponent implements OnInit {
   description: string;
   servises: {};
 
-  constructor(private userService: ApiConnectionService,
-    private rout:Router,
-    private http: HttpClient,
-    private location: Location) { }
-  ngOnInit() {
-  }
+  constructor(private userService: ApiConnectionService) { }
+  ngOnInit() {}
   ngAfterViewInit():void {
     this.userService.getService().subscribe(data => {
       this.idclient = localStorage.getItem('id-company-client');
@@ -41,10 +33,6 @@ export class MakeBookingsComponent implements OnInit {
           this.description= item.description;
         }
       }
-      
     })
-    
   }
-
-
 }

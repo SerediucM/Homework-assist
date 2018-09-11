@@ -6,20 +6,20 @@
       <input  type="file" class="choosefile submit_button" (change)="handleFileSelect($event)"  #fileInput style="cursor:pointer"/>
     </div>
     <div class="profile"> 
-        <label class="date">Company name</label>
-        <input type="text" class="tbox" required [(ngModel)]="name" name="companyName" #companyName= "ngModel"/><br><br>
-        <div class="err-companyName  alert-danger" *ngIf="companyName.touched && !companyName.valid" >
-            <div *ngIf="companyName.errors.required">Password is required</div>
-        </div>
+      <label class="date">Company name</label>
+      <input type="text" class="tbox" required [(ngModel)]="name" name="companyName" #companyName= "ngModel"/><br><br>
+      <div class="err-companyName  alert-danger" *ngIf="companyName.touched && !companyName.valid" >
+        <div *ngIf="companyName.errors.required">Password is required</div>
+      </div>
       <div class="company_description">
         <label class="date">Company description</label>
         <textarea required [(ngModel)]=description name="companyDescription" #companyDescription= "ngModel"></textarea >
         <div class="err-companyDescription  alert-danger" *ngIf="companyDescription.touched && !companyDescription.valid" >
-            <div *ngIf="companyDescription.errors.required">Password is required</div>
+          <div *ngIf="companyDescription.errors.required">Password is required</div>
         </div>
       </div>
       <div class="buttons">
-        <button (click)="logout()" class="book_btn btn btn-secondary" style="float:left" >Sign out</button>
+        <button (click)="logout()" class="close_btn btn btn-secondary" style="float:left" >Sign out</button>
         <div class="form-group" >
           <button type="submit" (click)="save()"  style="float: right;" class="book_btn btn-lg  btn btn-primary" [(disabled)]="!validformAccount.valid" >Save</button> 
         </div>
