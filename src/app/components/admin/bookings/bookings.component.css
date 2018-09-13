@@ -28,14 +28,14 @@ select{
 	border: none;
   }
 .table thead tr th:nth-child(1) {
-	padding-left: 450px;
-	}
+  padding-left: 450px;
+  }
 .table thead tr th:nth-child(2),
 .table tbody tr td:nth-child(2),
 .table thead tr th:nth-child(3),
 .table tbody tr td:nth-child(3) {
-	text-align: center;
-}
+  text-align: center;
+  }
 .table tbody td:nth-child(1){
 	padding-left: 450px;
 	width: 300px;
@@ -50,17 +50,17 @@ select{
 }
 .table tbody tr:nth-child(4n+1) {
 	background-color:#fbebfb;
-}
+  }
 .table tbody tr:nth-child(2n+0) {
 	background-color:#fff;
-}
+  }
 .table tbody tr:nth-child(4n+3) {
 	background-color:#e7e8f7;
- } 
- .table  tr>th,.table tr>td {
+  }
+.table  tr>th,.table tr>td {
 	border:0;
 	text-align:left;
-}
+  }
 .table thead tr th{
 	font-weight:400;
 }

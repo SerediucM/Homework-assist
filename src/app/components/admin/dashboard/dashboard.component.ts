@@ -65,7 +65,8 @@ export class DashboardComponent implements OnInit {
       spaces : this.spaces,
       duration : this.duration,
       price : this.prices,
-      key : localStorage.getItem('id-company')
+      key : localStorage.getItem('id-company'),
+      admin : localStorage.getItem('id')
       };
     this.userService.putUpdate( updateService as any).subscribe();
     window.location.reload();

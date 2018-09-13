@@ -35,7 +35,8 @@ export class AddServiceComponent implements OnInit {
       spaces : this.spaces,
       duration : this.duration,
       price : this.price,
-      key : localStorage.getItem('id-company')
+      key : localStorage.getItem('id-company'),
+      admin : localStorage.getItem('id')
       };
     this.userService.addServer( newService as any).subscribe();
     window.location.reload();

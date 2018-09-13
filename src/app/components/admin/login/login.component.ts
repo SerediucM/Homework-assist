@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
     private createInputPassword: string;
     secondMessage:boolean = true;
     checkVerify:boolean=false;
+    eroareGlobalaLogin: string
     err: string;
   showMyPass(pass) {
     this.showHide = !(this.showHide);
@@ -47,18 +48,16 @@ export class LoginComponent implements OnInit {
         data.forEach(item => {
           if (!gotResult) {
             if(this.loginInputEmail==item.email && this.loginInputPassword==item.password){
-              console.log("Citire db", item.id );
               localStorage.setItem('id', item.id);
-              console.log("Citire localStorage", localStorage.getItem('id') );
               this.rout.navigate(['company']);
               gotResult=true;
   
             } else if (this.loginInputEmail==item.email && this.loginInputPassword!=item.password) {
-              this.err="User and password is invalid";
+              this.eroareGlobalaLogin="User and password is invalid";
               gotResult=true;
   
             } else if(this.loginInputEmail!=item.email && this.loginInputPassword!=item.password){
-              this.err ="This account does not exist. Please register";
+              this.eroareGlobalaLogin ="This account does not exist. Please register";
               this.secondMessage = false;
 
             }
@@ -77,6 +76,14 @@ export class LoginComponent implements OnInit {
        this.userService.addUser(userr as User).subscribe(data=>{
        })
        this.manageForms(true,false,false)
+       this.reset();
+  }
+  reset(){
+    this.createInputName="";
+    this.createInputEmail="";
+    this.createInputPassword="";
+    this.loginInputEmail="";
+    this.loginInputPassword="";
   }
   manageForms(login: boolean, register: boolean, reset: boolean): void {
     this.loginContent = login;

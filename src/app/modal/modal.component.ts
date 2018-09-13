@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn} from '@angular/forms';
+import { Reservations } from '../shared/reservations';
+import {ApiConnectionService} from '../services/api-connection.service';
+
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
@@ -17,35 +20,42 @@ export class ModalComponent implements OnInit {
     public calendarData = false;
     public sentData = false;
     public myData=["Monday","Tuesday", "Wednesday","Thursday","Friday", "Saturday", "Sunday"]
-
+    private name : string;
+    private email : string;
+    private phone : string;
+    private time : string;
+    private day : string;
+    private availability : string;
 
   ngOnInit(){}
-  constructor(private modalService: NgbModal) {
+  constructor(private userService: ApiConnectionService,
+              private modalService: NgbModal) {
   }
-  minSelectedCheckboxes(min = 1) {
-    const validator: ValidatorFn = (formArray: FormArray) => {
-      const totalSelected = formArray.controls
-        .map(control => control.value)
-        .reduce((prev, next) => next ? prev + next : prev, 0);
-  
-      return totalSelected >= min ? null : { required: true };
-    };
-    return validator;
-}
-
   open(content) {
     this.manageForms(true,false,false);
     this.modalService.open(content, {size:'lg', centered: true}).result.then((result) => {
-    }, (reason) => {
-    });
+    }, (reason) => {});
+    
   }
 
   nextButton() {
     this.manageForms(false, false, true);
   }
   send(){
-
     this.manageForms(false, true, false);
+    this.availability= this.day.substring(0, 3)+","+ this.time;
+    console.log("substr", this.availability);
+    var addreservations = {
+      id: localStorage.getItem('id-servicent-clie'),
+      name: this.name,
+      email : this.email,
+      phone : this.phone,
+      availability :  this.availability,
+      idservice : localStorage.getItem('id-service-client'),
+      idcompany : localStorage.getItem('id-company-client')
+      };
+    this.userService.addReservations(  addreservations as any).subscribe();
+    // window.location.reload();
   }
   manageForms(_personalData : boolean, _sentData: boolean, _calendarData: boolean): void {
     this.personalData = _personalData;

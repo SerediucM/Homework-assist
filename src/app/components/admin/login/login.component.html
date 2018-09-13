@@ -2,7 +2,7 @@
   <!-- login page -->
     <div  class="container   " *ngIf="loginContent" > 
         <img src="../assets/booking_logo.png" alt="book_img" class="book_img"/>
-        <div class="errGlobal alert-danger">{{err}}</div>
+        <div class="errGlobal alert-danger">{{eroareGlobalaLogin}}</div>
         <form name="validformLogin"  #validformLogin="ngForm" class="div">
             <label class="date"> Email address </label>
             <input class="tbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=loginInputEmail  name="email"  #emaill= "ngModel" type="email">
@@ -25,7 +25,7 @@
     <!-- create a new account -->
     <div class="container " *ngIf="registerContent">
         <img src="../assets/booking_logo.png" alt="book_img" class="book_img"/>
-        <div class="errGlobal alert-danger">{{errC}}</div>
+        <div class="errGlobal alert-danger">{{eroareGlobalaCreate}}</div>
         <form name="validformLogin"  #validformLogin="ngForm" class="div">
             <label class="date" >Your name</label>
             <input class="tbox" required pattern="[A-Za-z\s]+$" [(ngModel)]=createInputName name="firstName"  #firstName="ngModel" type="text" >
@@ -43,16 +43,24 @@
                 <input class="tbox space-between" type="{{ 'text'}}" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%.^#:;,\|+_-`~*?&])[A-Za-z\d$@$!%.^#;:,\|+_-`~*?&]{12,50}" [(ngModel)]=createInputPassword name="passwordl" #passwordl= "ngModel">
                 <div [ngClass]="passwordl.errors.pattern ? 'err-password-createlong' : ''  " class="err-password-create  alert-danger" *ngIf="passwordl.touched && !passwordl.valid" >
                     <div *ngIf="passwordl.errors.required">Password is required</div>
-                    <div *ngIf="passwordl.errors.pattern">It must contain upper-case, lower-case, numbers, special characters and length should be at least 8 characters</div>    
+                    <div *ngIf="passwordl.errors.pattern">It must contain upper-case, lower-case, numbers, special characters and length should be at least 12 characters</div>    
                 </div>           
                 <input type="submit" (click)="CreateUser()"  class="book_btn btn-lg  btn  " [(disabled)]="!validformLogin.valid"  value="REGISTER">
+                    <div class="display_terms">
+                      <input type="checkbox"
+                             name="agree_terms"
+                             class="agree"
+                             ngModel
+                             required>
+                      <label class="terms">I agree with Terms & Conditions</label>
+                    </div>
                 <a  class="account-txt" (click)="manageForms(true, false, false)"><br>You already have an account?</a>
         </form>
     </div> 
     <!-- RESET -->
     <div class="container " *ngIf="resetContent">
         <img src="../assets/booking_logo.png" alt="book_img" class="book_img"/>
-        <div class="errGlobal alert-danger">{{errC}}</div>
+        <div class="errGlobal alert-danger">{{eroareGlobalaReset}}</div>
         <form name="validformLogin"  #validformLogin="ngForm" class="div">
             <label class="date"> Email address </label>
             <input class="tbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=loginInputEmail  name="email"  #emaill= "ngModel" type="email">

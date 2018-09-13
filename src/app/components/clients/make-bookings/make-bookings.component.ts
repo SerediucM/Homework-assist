@@ -23,10 +23,8 @@ export class MakeBookingsComponent implements OnInit {
     })
     this.userService.getCompanys().subscribe(data => {
       this.idclient = localStorage.getItem('id-company-client');
-      
       for( var item of data)
       {
-        console.log(data);
         if(item.id == this.idclient)
         {
           this.name= item.name;
@@ -34,5 +32,8 @@ export class MakeBookingsComponent implements OnInit {
         }
       }
     })
+  }
+  click(comp){
+    localStorage.setItem('id-service-client', comp.id);
   }
 }

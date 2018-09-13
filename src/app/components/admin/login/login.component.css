@@ -6,12 +6,27 @@
     width: 30%;
     background: transparent
 }
+.errGlobal{
+    position: absolute;
+    background: transparent;
+    left: 38%;
+    top:47%;
+    width: 40%;
+}
+.display_terms{
+    display: inline;
+    padding: 27px;
+}
+.agree{
+    width: 65px;
+    margin-top: 17px;
+}
 .ng-valid[required], .ng-valid.required  {
     border-left: 2px solid #42A948; /* green */
-}
+ }
 .ng-invalid:not(form)  {
     border-left: 2px solid #a94442; /* red */
-}
+}  
 .err-password-login { 
     position: absolute;
     left: 100%;
@@ -35,7 +50,7 @@
 .err-name-create{
     position: absolute;
     left: 100%;
-    top: 18%;
+    top: 16%;
     width: 40%;
     height: 5%;
     background: transparent
@@ -43,7 +58,7 @@
 .err-email-recover{
     position: absolute;
     left: 100%;
-    top: 37%;
+    top: 35%;
     width: 40%;
     height: 5%;
     background: transparent;
@@ -95,7 +110,7 @@ a.account-txt{
     cursor: pointer;
     position: absolute;
     top: 83%;
-    left: 20%;
+    left: 18%;
 }
 .tbox{
     font-family: 'Open Sans', sans-serif;
@@ -128,7 +143,6 @@ a.account-txt{
 .div{
     font-family: 'Open Sans', sans-serif;
     width: 405px;
-    /* margin: 0 auto; */
     position: absolute;
     left: 38%;
     top: 48%;
@@ -136,8 +150,6 @@ a.account-txt{
 .book_img{
     height:270px;
     width:500px;
-    /* margin: 0 auto; */
-    /* margin-top: 60px; */
     position: absolute;
     left: 35%;
     top: 10%;

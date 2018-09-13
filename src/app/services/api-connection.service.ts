@@ -4,6 +4,7 @@ import { Observable , of } from 'rxjs';
 import { User } from '../shared/admin'; 
 import { Service } from '../shared/Service';
 import { Company } from '../shared/company';
+import { Reservations } from '../shared/reservations';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -60,5 +61,14 @@ export class ApiConnectionService {
    addCompany( comp:Company): Observable<Company>{
     const urlP = `${this. url}`;
      return this.http.post<Company>(urlP + "/company" , comp);
+   }
+   getReservations():Observable<any>
+   {
+    const url = `${this.url}`;
+    return this.http.get<Reservations>(url + '/rezervations' );
+   }
+   addReservations( reservations:Reservations): Observable<Reservations>{
+    const urlP = `${this. url}`;
+     return this.http.post<Reservations>(urlP + "/rezervations", reservations);
    }
 }

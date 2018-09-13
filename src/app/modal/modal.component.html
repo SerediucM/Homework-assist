@@ -50,7 +50,7 @@
       <tr class="left_row" >
           <td>
             <div class="left ">
-              <h5 class="text">Enter a day </h5>
+              <h5 class="text">Enter a time </h5>
             <input class="tbox" type="time" required [(ngModel)]=time name="passwordl" #passwordl= "ngModel">
             <div class="err alert-danger" *ngIf="passwordl.touched && !passwordl.valid" >
                 <div *ngIf="passwordl.errors.required">Time is required</div>
@@ -59,8 +59,8 @@
           </td>
           <td> 
             <div class="right " >
-              <h5 class="text">Enter a  time </h5>
-              <select class="mb-3" [(ngModel)]="startDay" name="emaill" #emaill="ngModel" required >
+              <h5 class="text">Enter a  day </h5>
+              <select class="mb-3" [(ngModel)]="day" name="emaill" #emaill="ngModel" required >
                 <option  *ngFor="let day of myData" [ngValue]="day"  >{{day}}</option>
               </select> 
               <div class="err alert-danger " *ngIf="emaill.touched  && !emaill.valid ">
@@ -81,7 +81,7 @@
     <div class="third_content" >
       <img class="sent_img" src="../assets/sent.png">
       <h1 class="make-your-booking" style=" margin-top: 10px;">Your request was sent!</h1>
-      <h5>In a couple on seconds a confirmation email will be sent to your email address with all the details for your reservation. Thank you for using our services!</h5>
+      <h5>In a couple on seconds a confirmation email will be sent to your email address with all the details for your reservation.<br> Thank you for using our services!</h5>
       <button class="book_btn" aria-label="Close" (click)="d()" >CLOSE</button> <!--@click="hideModal_final"-->
     </div>
   </form>
