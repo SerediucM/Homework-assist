@@ -19,9 +19,7 @@ export class CalendarComponent implements OnInit {
   ngAfterViewInit():void {
     this.userService.getReservations().subscribe(data => {
       this.idcompany = localStorage.getItem('id-company');
-      console.log("key  ", this.idcompany);
       this.reservations = data;
-      console.log("data dashboard", data);
     })
   }
 }

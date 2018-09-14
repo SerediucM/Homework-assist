@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ApiConnectionService} from '../../../services/api-connection.service';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Service } from '../../../shared/Service';
-import { Location } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-dashboard',
@@ -31,9 +30,7 @@ export class DashboardComponent implements OnInit {
   ngAfterViewInit():void {
     this.userService.getService().subscribe(data => {
       this.idclient = localStorage.getItem('id-company');
-      console.log("key  ", this.idclient);
       this.Services = data;
-      console.log("data dashboard", data);
     })
   }
   newService(){

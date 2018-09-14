@@ -22,17 +22,13 @@ export class CompanyComponent implements OnInit {
     localStorage.setItem('id-company', '0');
     this.userService.getCompanys().subscribe(data => {
       this.idclient = localStorage.getItem('id');
-      console.log("key  ", this.idclient);
       this.Companys = data;
-      console.log("data comapny ", data);
     })
   }
   new_company(){
-    console.log("aici uuton");
     this.rout.navigate(['account']);
   }
   open(company){
-    console.log("company " , company.name);
     localStorage.setItem('id-company', company.id);
     this.rout.navigate(['dashboard']);
 

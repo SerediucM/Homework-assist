@@ -244,6 +244,24 @@
       "availability": "Thu,13:00",
       "idservice": "1",
       "idcompany": "1"
+    },
+    {
+      "id": 9,
+      "name": "Marinescu",
+      "email": "john.doe1@assist.ro",
+      "phone": "0745987652",
+      "availability": "Thu,01:00",
+      "idservice": "2",
+      "idcompany": "1"
+    },
+    {
+      "id": 10,
+      "name": "fhfghfgj",
+      "email": "gykygk@dsf.fdgh",
+      "phone": "0745987459",
+      "availability": "Mon,05:00",
+      "idservice": "2",
+      "idcompany": "1"
     }
   ]
 }

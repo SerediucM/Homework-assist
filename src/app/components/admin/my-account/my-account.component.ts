@@ -35,9 +35,7 @@ export class MyAccountComponent implements OnInit {
       this.idcompany = localStorage.getItem('id-company');
       for(let item of data)
       {
-        console.log("data ", );
         if(this.idcompany == item.id){
-          console.log("data ", data);
           this.name = item.name;
           this.description = item.description;
           this.logo = item.logo;
@@ -90,7 +88,6 @@ export class MyAccountComponent implements OnInit {
   _handleReaderLoaded(readerEvt) {
     var binaryString = readerEvt.target.result;
     binaryString = btoa(binaryString);
-    console.log(btoa(binaryString));
   }
   
 }

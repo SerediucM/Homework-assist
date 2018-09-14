@@ -91,7 +91,6 @@ export class LoginComponent implements OnInit {
               };
               this.userService.ResetUser(userreset as User).subscribe(data=>{
               })
-              // update
              this.manageForms(true, false, false);
              this.reset();
               gotResult=true;
@@ -122,7 +121,6 @@ export class LoginComponent implements OnInit {
   }
   showMyPass(pass) {
     this.showHide = !(this.showHide);
-    console.log("this showhide:", this.showHide);
   }
   showMyPassreset(pass){
     this.showHideReset = !(this.showHideReset);
@@ -132,7 +130,6 @@ export class LoginComponent implements OnInit {
   }
   showMyPassCreate(){
     this.showHidecreate = !(this.showHidecreate);
-    console.log("this showHidecreate:", this.showHidecreate);
   }
 
  

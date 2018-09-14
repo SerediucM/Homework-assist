@@ -44,7 +44,6 @@ export class ModalComponent implements OnInit {
   send(){
     this.manageForms(false, true, false);
     this.availability= this.day.substring(0, 3)+","+ this.time;
-    console.log("substr", this.availability);
     var addreservations = {
       id: localStorage.getItem('id-servicent-clie'),
       name: this.name,
