@@ -19,7 +19,8 @@ import { MakeBookingsComponent } from './components/clients/make-bookings/make-b
 import { AddServiceComponent } from './components/admin/add-service/add-service.component';
 import { ModalComponent } from './modal/modal.component';
 import { CompanyComponent } from './components/admin/company/company.component';
-import { CompanyClientComponent } from './components/clients/company-client/company-client.component'
+import { CompanyClientComponent } from './components/clients/company-client/company-client.component';
+
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },

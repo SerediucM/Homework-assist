@@ -6,6 +6,19 @@
     width: 30%;
     background: transparent
 }
+.showPassword{
+    background: transparent;
+    border: 0px;
+    outline: 0px;
+    right: 15px;
+    top: 10px;
+    margin-left: -10px;
+} 
+.style-eye{
+    margin-left: -35px;
+    color: rgb(42, 43, 44);
+    margin-top: 2px;
+  }      
 .errGlobal{
     position: absolute;
     background: transparent;
@@ -35,36 +48,41 @@
     height: 5%;
     background: transparent
 }
-.visiblePassLogin{
-    position: absolute;
-    left: 92%;
-    top: 58%;
-    cursor: pointer;  
-}
-.visiblePassCreate{
-    position: absolute;
-    left: 92%;
-    top: 68%;
-    cursor: pointer; 
-}
 .err-name-create{
     position: absolute;
     left: 100%;
     top: 16%;
-    width: 40%;
+    width: 60%;
     height: 5%;
     background: transparent
 }
 .err-email-recover{
     position: absolute;
     left: 100%;
-    top: 35%;
+    top: 17%;
     width: 40%;
     height: 5%;
     background: transparent;
     text-align: left;
 }
-.err-email-create{
+.err-confirm-recover {
+    position: absolute;
+    left: 100%;
+    top: 67%;
+    width: 40%;
+    height: 5%;
+    background: transparent;
+    text-align: left;
+}
+.err-confirm-recoverlong{
+    top: 62% !important; 
+    width: 88% !important ;
+}
+.err-password-recoverlong{
+    top: 37% !important; 
+    width: 88% !important ;
+}
+.err-password-recover{
     position: absolute;
     left: 100%;
     top: 43%;
@@ -73,17 +91,27 @@
     background: transparent;
     text-align: left;
 }
+.err-email-create{
+    position: absolute;
+    left: 100%;
+    top: 38%;
+    width: 40%;
+    height: 5%;
+    background: transparent;
+    text-align: left;
+}
 .err-password-create{
     position: absolute;
     left: 100%;
-    top: 68%;
+    top: 61%;
     width: 88%;
     height: 5%;
     text-align: left;
     background: transparent;
 }
 .err-password-createlong{
-    top: 66% !important ;
+    top: 56% !important ;
+    width: 88%;
 }
 a.recover-password-txt{
     font-size: 20px;

@@ -18,6 +18,7 @@ export class ApiConnectionService {
   constructor(private http: HttpClient) { }
   url = 'http://localhost:3000';
   urlService = 'http://localhost:3000/Service';
+  urlUser = 'http://localhost:3000/users';
 
   getUser(): Observable<any>
  {
@@ -71,4 +72,9 @@ export class ApiConnectionService {
     const urlP = `${this. url}`;
      return this.http.post<Reservations>(urlP + "/rezervations", reservations);
    }
+   ResetUser(User: User): Observable<any> {
+    const id = typeof User === 'number' ? User : User.id;
+    const url = `${this. urlUser}/${id}`;
+    return this.http.put<any>(url ,User);
+  }
 }

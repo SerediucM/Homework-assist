@@ -22,26 +22,25 @@ export class LoginComponent implements OnInit {
     }
     public showHide = true;
     public showHidecreate = true;
+    public showHideConfirmReset = true;
+    public showHideReset = true;
     public loginContent = true;
     public resetContent = false;
     public registerContent = false;
     private loginInputEmail: string;
     private loginInputPassword: string;
     private createInputName: string;
+    private resetInputConfirmPassword: string;
+    private resetInputPassword: string;
+    private resetInputEmail: string;
     private createInputEmail: string;
     private createInputPassword: string;
     secondMessage:boolean = true;
     checkVerify:boolean=false;
-    eroareGlobalaLogin: string
+    eroareGlobalaLogin: string;
+    eroareGlobalReset:string;
     err: string;
-  showMyPass(pass) {
-    this.showHide = !(this.showHide);
-    console.log("this showhide:", this.showHide);
-  }
-  showMyPassCreate(){
-    this.showHidecreate = !(this.showHidecreate);
-    console.log("this showHidecreate:", this.showHidecreate);
-  }
+
   loginUser(){
     var gotResult = false;
       this.userService.getUser().subscribe(data => {
@@ -59,7 +58,6 @@ export class LoginComponent implements OnInit {
             } else if(this.loginInputEmail!=item.email && this.loginInputPassword!=item.password){
               this.eroareGlobalaLogin ="This account does not exist. Please register";
               this.secondMessage = false;
-
             }
           }
         });
@@ -78,17 +76,63 @@ export class LoginComponent implements OnInit {
        this.manageForms(true,false,false)
        this.reset();
   }
+  ResetPassword(){
+    var gotResult = false;
+    this.userService.getUser().subscribe(data => {
+      data.forEach(item => {
+        if (!gotResult) {
+          if(this.resetInputEmail==item.email ){
+            if(this.resetInputPassword==this.resetInputConfirmPassword){
+              var userreset ={
+                id:item.id ,
+                name : item.name,
+                email : item.email,
+                password :this.resetInputConfirmPassword
+              };
+              this.userService.ResetUser(userreset as User).subscribe(data=>{
+              })
+              // update
+             this.manageForms(true, false, false);
+             this.reset();
+              gotResult=true;
+            }else if (this.resetInputPassword!=this.resetInputConfirmPassword) {
+              this.eroareGlobalReset="Password not match";
+              gotResult=true;
+            }
+          }else if(this.resetInputEmail != item.emaild){
+            this.eroareGlobalReset ="This email does not exist. Please register";
+          }
+        }
+      });
+    });
+  }
   reset(){
     this.createInputName="";
     this.createInputEmail="";
     this.createInputPassword="";
     this.loginInputEmail="";
     this.loginInputPassword="";
+    this.resetInputConfirmPassword="";
+    this.resetInputPassword="";
   }
   manageForms(login: boolean, register: boolean, reset: boolean): void {
     this.loginContent = login;
     this.registerContent = register;
     this.resetContent = reset;
+  }
+  showMyPass(pass) {
+    this.showHide = !(this.showHide);
+    console.log("this showhide:", this.showHide);
+  }
+  showMyPassreset(pass){
+    this.showHideReset = !(this.showHideReset);
+  }
+  showMyConfirmReset(pass){
+    this.showHideConfirmReset = !(this.showHideConfirmReset);
+  }
+  showMyPassCreate(){
+    this.showHidecreate = !(this.showHidecreate);
+    console.log("this showHidecreate:", this.showHidecreate);
   }
 
  

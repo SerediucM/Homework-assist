@@ -12,7 +12,9 @@
             </div> 
             <label class="date">Password</label>
             <input class="tbox space-between" type="{{showHide ? 'password' : 'text'}}" required [(ngModel)]=loginInputPassword name="passwordl" #passwordl= "ngModel">
-            <i class="fa { showHide ? 'fa-eye' : 'fa-eye-slash'} glyphicon glyphicon-eye-open visiblePassLogin " (mousedown)="showMyPass()"  ></i>
+            <button type="button" (mousedown)="showMyPass()" class="showPassword">
+                    <i class="fa {{ showHide ? 'fa-eye' : 'fa-eye-slash'}} style-eye"></i>
+                </button>
             <div class="err-password-login  alert-danger" *ngIf="passwordl.touched && !passwordl.valid" >
                 <div *ngIf="passwordl.errors.required">Password is required</div>
             </div>
@@ -40,18 +42,17 @@
                     <div *ngIf="emaill.errors.pattern  ">Email invalid</div>
                 </div> 
                 <label class="date">Password</label>
-                <input class="tbox space-between" type="{{ 'text'}}" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%.^#:;,\|+_-`~*?&])[A-Za-z\d$@$!%.^#;:,\|+_-`~*?&]{12,50}" [(ngModel)]=createInputPassword name="passwordl" #passwordl= "ngModel">
+                <input class="tbox space-between" type="{{showHidecreate ? 'password' : 'text'}}" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%.^#:;,\|+_-`~*?&])[A-Za-z\d$@$!%.^#;:,\|+_-`~*?&]{12,50}" [(ngModel)]=createInputPassword name="passwordl" #passwordl= "ngModel">
+                <button type="button" (mousedown)="showMyPassCreate()" class="showPassword">
+                    <i class="fa {{ showHidecreate ? 'fa-eye' : 'fa-eye-slash'}} style-eye"></i>
+                </button>
                 <div [ngClass]="passwordl.errors.pattern ? 'err-password-createlong' : ''  " class="err-password-create  alert-danger" *ngIf="passwordl.touched && !passwordl.valid" >
                     <div *ngIf="passwordl.errors.required">Password is required</div>
                     <div *ngIf="passwordl.errors.pattern">It must contain upper-case, lower-case, numbers, special characters and length should be at least 12 characters</div>    
                 </div>           
                 <input type="submit" (click)="CreateUser()"  class="book_btn btn-lg  btn  " [(disabled)]="!validformLogin.valid"  value="REGISTER">
                     <div class="display_terms">
-                      <input type="checkbox"
-                             name="agree_terms"
-                             class="agree"
-                             ngModel
-                             required>
+                      <input type="checkbox" name="agree_terms" class="agree" ngModel required>
                       <label class="terms">I agree with Terms & Conditions</label>
                     </div>
                 <a  class="account-txt" (click)="manageForms(true, false, false)"><br>You already have an account?</a>
@@ -60,15 +61,33 @@
     <!-- RESET -->
     <div class="container " *ngIf="resetContent">
         <img src="../assets/booking_logo.png" alt="book_img" class="book_img"/>
-        <div class="errGlobal alert-danger">{{eroareGlobalaReset}}</div>
+        <div class="errGlobal alert-danger">{{eroareGlobalReset}}</div>
         <form name="validformLogin"  #validformLogin="ngForm" class="div">
             <label class="date"> Email address </label>
-            <input class="tbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=loginInputEmail  name="email"  #emaill= "ngModel" type="email">
+            <input class="tbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"  [(ngModel)]=resetInputEmail  name="email"  #emaill= "ngModel" type="email">
             <div class="err-email-recover  alert-danger " *ngIf="emaill.touched  && !emaill.valid ">
                 <div *ngIf="emaill.errors.required ">Email is required</div>
                 <div *ngIf="emaill.errors.pattern  ">Email invalid</div>
             </div> 
-            <input type="submit" (click)="loginUser()"  class="book_btn btn-lg  btn" [(disabled)]="!validformLogin.valid"  value="RECOVER">     
+            <label class="date"> Password </label>
+            <input class="tbox" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%.^#:;,\|+_-`~*?&])[A-Za-z\d$@$!%.^#;:,\|+_-`~*?&]{12,50}"  [(ngModel)]=resetInputPassword name="password"  #password= "ngModel" type="{{showHideReset ? 'password' : 'text'}}">
+            <button type="button" (mousedown)="showMyPassreset()" class="showPassword">
+                <i class="fa {{ showHideReset ? 'fa-eye' : 'fa-eye-slash'}} style-eye"></i>
+            </button>
+            <div [ngClass]="password.errors.pattern ? 'err-password-recoverlong' : ''  " class="err-password-recover  alert-danger " *ngIf="password.touched  && !password.valid ">
+                <div *ngIf="password.errors.required ">Password is required</div>
+                <div *ngIf="password.errors.pattern  ">It must contain upper-case, lower-case, numbers, special characters and length should be at least 12 characters</div>
+            </div>
+            <label class="date"> Confirm Password </label>
+            <input class="tbox" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%.^#:;,\|+_-`~*?&])[A-Za-z\d$@$!%.^#;:,\|+_-`~*?&]{12,50}"  [(ngModel)]=resetInputConfirmPassword  name="confirm"  #confirm= "ngModel" type="{{showHideConfirmReset ? 'password' : 'text'}}">
+            <button type="button" (mousedown)="showMyConfirmReset()" class="showPassword">
+                <i class="fa {{ showHideConfirmReset ? 'fa-eye' : 'fa-eye-slash'}} style-eye"></i>
+            </button>
+            <div [ngClass]="confirm.errors.pattern ? 'err-confirm-recoverlong' : ''  " class="err-confirm-recover  alert-danger " *ngIf="confirm.touched  && !confirm.valid ">
+                <div *ngIf="confirm.errors.required ">Password is required</div>
+                <div *ngIf="confirm.errors.pattern  ">It must contain upper-case, lower-case, numbers, special characters and length should be at least 12 characters</div>
+            </div>
+            <input type="submit" (click)="ResetPassword()"  class="book_btn btn-lg  btn" [(disabled)]="!validformLogin.valid"  value="RECOVER">     
         </form>
     </div>
 </div>

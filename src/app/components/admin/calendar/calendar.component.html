@@ -7,20 +7,37 @@
     <h6>Prev. week</h6>
     <h6>Next week</h6>
   </section>
-<section class="panel">
-     
-  <!-- <services v-bind:list="firstday"/>
-  <services v-bind:list="secondday"/>
-  <services v-bind:list="thirdday"/> -->
-  
-  <!-- <div v-for="item in bigArr">
-    <services v-bind:list="item"/>
-  </div> -->
-  
-</section>
-  
-  <div>
+  <!-- CALENDAR -->
+  <section class="panel">
+    <div >
+      <table class="table" *ngFor="let service of reservations"  >
+        <thead >
+          <tr >
+            <th>{{reservations[0].availability}}</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let service of reservations" >  
+            <td *ngIf="service.idcompany==idcompany" >
+              {{service.name}}
+            </td>
+            <td *ngIf="service.idcompany==idcompany">
+              {{service.email}}
+            </td>
+            <td *ngIf="service.idcompany==idcompany">
+              {{service.phone}}
+            </td>
+            <td *ngIf="service.idcompany==idcompany">
+              {{service.availability}}
+            </td>
+            <td *ngIf="service.idcompany==idcompany" >
+                Dell
+              </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-</div>
 
 </div>
